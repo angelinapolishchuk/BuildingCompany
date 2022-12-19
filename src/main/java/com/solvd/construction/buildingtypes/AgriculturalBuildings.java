@@ -1,11 +1,13 @@
 package com.solvd.construction.buildingtypes;
 
+import com.solvd.construction.Type;
+
 public class AgriculturalBuildings extends Buildings{
         private int numberOfCompartments;
         private int doorWidth;
 
         public AgriculturalBuildings(String buildingLayout, int maxNumbersOfFloors, int maxArea, int numberOfCompartments, int doorWidth) {
-            super(buildingLayout, maxNumbersOfFloors, maxArea);
+            super(Type.valueOf(buildingLayout), maxNumbersOfFloors, maxArea);
             this.numberOfCompartments = numberOfCompartments;
             this.doorWidth = doorWidth;
 

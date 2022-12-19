@@ -2,6 +2,7 @@ package com.solvd.construction.suppliers;
 
 import com.solvd.construction.building.Building;
 
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class Suppliers {
@@ -52,6 +53,11 @@ public class Suppliers {
         if (!(o instanceof Suppliers suppliers)) return false;
         return weightOfDelivery == suppliers.weightOfDelivery && Objects.equals(typeOfDelivery, suppliers.typeOfDelivery);
     }
-
-
+    public static ArrayList<Suppliers> createListOfSuppliers() {
+        ArrayList<Suppliers> suppliers = new ArrayList<>();
+        suppliers.add(new Suppliers("materials", 5000));
+        suppliers.add(new Suppliers("tools", 100));
+        suppliers.add(new Suppliers("equipment", 1100));
+        return suppliers;
+    }
 }

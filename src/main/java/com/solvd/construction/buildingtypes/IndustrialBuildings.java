@@ -1,11 +1,13 @@
 package com.solvd.construction.buildingtypes;
 
+import com.solvd.construction.Type;
+
 public class IndustrialBuildings extends Buildings{
     private int ceilingHeight;
     private int numberOfExists;
 
     public IndustrialBuildings (String buildingLayout, int maxNumbersOfFloors, int maxArea, int ceilingHeight, int numberOfExists) {
-        super(buildingLayout, maxNumbersOfFloors, maxArea);
+        super(Type.valueOf(buildingLayout), maxNumbersOfFloors, maxArea);
         this.ceilingHeight = ceilingHeight;
         this.numberOfExists = numberOfExists;
 

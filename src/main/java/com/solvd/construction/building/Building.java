@@ -1,11 +1,18 @@
 package com.solvd.construction.building;
 
 import com.solvd.construction.CartographicObject;
-import com.solvd.construction.brigade.Brigade;
+import com.solvd.construction.acceptance.Acceptance;
 import com.solvd.construction.investors.Investors;
 import com.solvd.construction.suppliers.Suppliers;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.text.SimpleDateFormat;
 import java.util.Objects;
+import java.util.Scanner;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
 
 public class Building implements CartographicObject {
 
@@ -14,20 +21,22 @@ public class Building implements CartographicObject {
     private String materials;
     private int startDate;
     private int endDate;
-    private Brigade brigade;
     private Suppliers suppliers;
     private Investors investors;
 
-    public Building (String buildingType, String placeOfConstruction, String materials, int startDate, int endDate, Brigade brigade, Suppliers suppliers, Investors investors) {
+    public Building (String buildingType, String placeOfConstruction, String materials, int startDate, int endDate, Suppliers suppliers, Investors investors) {
         this.buildingType = buildingType;
         this.placeOfConstruction = placeOfConstruction;
         this.materials = materials;
         this.startDate = startDate;
         this.endDate = endDate;
-        this.brigade = brigade;
         this.suppliers = suppliers;
         this.investors = investors;
     }
+    private static final Logger LOGGER = LogManager.getLogManager().getLogger(String.valueOf(Building.class));
+
+    public static SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
+
 
     public String getBuildingType() {
 
@@ -78,12 +87,6 @@ public class Building implements CartographicObject {
         this.endDate = endDate;
     }
 
-    public Brigade getBrigade() {
-        return brigade;
-    }
-    public void setBrigade(Brigade brigade) {
-        this.brigade = brigade;
-    }
     public Suppliers getSuppliers() {
         return suppliers;
     }
@@ -97,6 +100,9 @@ public class Building implements CartographicObject {
         this.investors = investors;
     }
 
+    @Override
+    public void searchOfBuilding() { }
+
     public void displayCartographicObject() { }
 
     @Override
@@ -105,7 +111,6 @@ public class Building implements CartographicObject {
                 ", buildingType='" + buildingType + '\'' +
                 ", placeOfConstruction='" + placeOfConstruction + '\'' +
                 ", materials='" + materials + '\'' +
-                ", brigade='" + brigade + '\'' +
                 ", suppliers='" + suppliers + '\'' +
                 ", investors='" + investors + '\'' +
                 ", startDate=" + startDate +
@@ -115,7 +120,7 @@ public class Building implements CartographicObject {
 
     @Override
     public int hashCode() {
-        return Objects.hash(buildingType, placeOfConstruction, materials, brigade, suppliers, startDate, endDate, investors);
+        return Objects.hash(buildingType, placeOfConstruction, materials, suppliers, startDate, endDate, investors);
     }
 
 
@@ -123,7 +128,7 @@ public class Building implements CartographicObject {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Building building)) return false;
-        return startDate == building.startDate && endDate == building.endDate && Objects.equals(buildingType, building.buildingType) && Objects.equals(placeOfConstruction, building.placeOfConstruction) && Objects.equals(materials, building.materials) && Objects.equals(brigade, building.brigade) && Objects.equals(suppliers, building.suppliers) && Objects.equals(investors, building.investors);
+        return startDate == building.startDate && endDate == building.endDate && Objects.equals(buildingType, building.buildingType) && Objects.equals(placeOfConstruction, building.placeOfConstruction) && Objects.equals(materials, building.materials) && Objects.equals(suppliers, building.suppliers) && Objects.equals(investors, building.investors);
     }
 
 }

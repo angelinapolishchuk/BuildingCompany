@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="474ea609-7490-4d12-95c9-922260cc54c0" name="Changes" comment="Commit message.">
+      <change afterPath="$PROJECT_DIR$/.idea/log4j2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/materials/Materials.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/priceofbuilding/PriceOfBuilding.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/startdate/StartDate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/CartographicObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/CartographicObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/Type.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/Type.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/acceptance/Acceptance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/acceptance/Acceptance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/brigade/Brigade.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/building/Building.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/building/Building.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/buildingtypes/AgriculturalBuildings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/buildingtypes/AgriculturalBuildings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/buildingtypes/Buildings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/buildingtypes/Buildings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/buildingtypes/IndustrialBuildings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/buildingtypes/IndustrialBuildings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/exceptions/EAmountOfContributionsException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/exceptions/EBrigadeException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/exceptions/EBuildingsException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/exceptions/EPeopleException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/exceptions/ETypeOfStoneException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/investors/Investors.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/materials/FerroconcretePlate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/materials/FerroconcretePlate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/materials/Stone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/materials/Stone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/materials/Wood.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/materials/Wood.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/newconstruction/ConstructionOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/newconstruction/ConstructionOne.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/request/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/request/Request.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/staff/Builder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/staff/Builder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/staff/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/staff/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/suppliers/Suppliers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/suppliers/Suppliers.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" show_ignored="true" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Ангелина Полищук &lt;angelinapolishchuk@angelinas-macbook-air.local&gt;" />
+      </list>
+    </option>
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="90141f72-d0d1-4aa0-862c-e0cf09a078ef" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="90141f72-d0d1-4aa0-862c-e0cf09a078ef" />
+        <option name="url" value="https://github.com/username/myproject.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2Hzn3RUBQPmnvWTtKidL6kjojrI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/angelinapolishchuk/IdeaProjects/BuildingCompanyCopy&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
+  }
+}</component>
+  <component name="Push.Settings">
+    <force-push-targets>
+      <force-push-target remote-path="origin" branch="main" />
+    </force-push-targets>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.solvd.construction" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="BuildingCompany" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="BuildingCompany" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="474ea609-7490-4d12-95c9-922260cc54c0" name="Changes" comment="" />
+      <created>1669296584213</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1669296584213</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Commit message.">
+      <created>1671098816312</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1671098816312</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Commit message.">
+      <created>1671197369184</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1671197369184</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Commit message.">
+      <created>1671442566751</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1671442566751</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="80b95444-5c1b-4511-97e2-d738ef2d0003">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="user">
+                    <value>
+                      <list>
+                        <option value="angelinapolishchuk" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="user">
+                    <value>
+                      <list>
+                        <option value="*" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="80b95444-5c1b-4511-97e2-d738ef2d0003" value="TOOL_WINDOW" />
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="User">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="angelinapolishchuk" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="*" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Commit message." />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit message." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar:///Library/Java/JavaVirtualMachines/jdk-19.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/Object.java</url>
+          <line>256</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/solvd/construction/staff/Person.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/BuildingCompany$ConsumerRequest.ic" NAME="ConsumerRequest Coverage Results" MODIFIED="1669991970297" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.solvd.construction.consumerrequest.*</FILTER>
+    </SUITE>
+  </component>
+</project>

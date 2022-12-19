@@ -3,8 +3,12 @@ package com.solvd.construction.newconstruction;
 import com.solvd.construction.Type;
 import com.solvd.construction.buildingtypes.Buildings;
 
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+
 public class ConstructionOne {
-    public void main(String[] args) {
+    private static final Logger LOGGER = LogManager.getLogManager().getLogger(String.valueOf(ConstructionOne.class));
+    public void Build() {
         Building b1 = new Building("Toy Factory For Kids", Type.INDUSTRIAL);
         System.out.printf (b1.name, b1.buildingType);
         switch (b1.buildingType){
@@ -18,7 +22,7 @@ public class ConstructionOne {
                 System.out.println("Agricultural Building");
                 break;
         }
-        System.out.println(Type.INDUSTRIAL.ordinal());
+        LOGGER.info(String.valueOf(Type.INDUSTRIAL.ordinal()));
     }
     class Building{
         String name;

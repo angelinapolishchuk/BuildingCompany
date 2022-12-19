@@ -1,42 +1,27 @@
 package com.solvd.construction.materials;
 
-import com.solvd.construction.exceptions.EBuildingsException;
-import com.solvd.construction.exceptions.ETypeOfStoneException;
-
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
 
-public class Stone {
+public class Stone extends Materials{
+    private static final Logger LOGGER = LogManager.getLogManager().getLogger(String.valueOf(Stone.class));
     private static String typeOfStone;
     private static int maxWeight;
 
-    public Stone(String typeOfStone, int maxWeight) {
+    public Stone(String typeOfStone, int maxWeight, int cost) {
+        super(cost);
         this.typeOfStone = typeOfStone;
         this.maxWeight = maxWeight;
 
     }
 
     public static void main(String[] args) {
-        Stone stone = new Stone("Marble", 500);
-        System.out.println(Stone.typeOfStone);
-        System.out.println(Stone.maxWeight);
+        Stone stone = new Stone("Marble", 500, 250);
+        LOGGER.info(Stone.typeOfStone);
+        LOGGER.info(String.valueOf(Stone.maxWeight));
 
-    }
-
-    public void Stone(String _typeOfStone) throws ETypeOfStoneException, IOException {
-        BufferedReader reader = null;
-        Stone typeOfStone = Stone.daytime(reader.readLine());
-
-        try {
-            if (typeOfStone == null) {
-                throw new ETypeOfStoneException();
-            }
-
-        }
-        catch (ETypeOfStoneException e) {
-            System.out.println("Exception:".toString());
-            return;
-        }
     }
 
     private static Stone daytime(String typeOfStone) {
