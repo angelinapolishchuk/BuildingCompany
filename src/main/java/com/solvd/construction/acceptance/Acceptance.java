@@ -9,7 +9,7 @@ import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
 public final class Acceptance {
-    private static final Logger LOGGER = LogManager.getLogManager().getLogger(String.valueOf(Acceptance.class));
+    private static final Logger LOGGER = Logger.getLogger(String.valueOf(Acceptance.class));
 
     public static SimpleDateFormat dateFormat2 = new SimpleDateFormat("dd.MM.yyyy");
 

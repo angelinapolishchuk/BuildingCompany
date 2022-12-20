@@ -13,7 +13,7 @@ import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
 public abstract class Buildings {
-    private static final Logger LOGGER = LogManager.getLogManager().getLogger(String.valueOf(Buildings.class));
+    private static final Logger LOGGER = Logger.getLogger(String.valueOf(Buildings.class));
     public static String buildingType = new String();
     private String buildingLayout;
     private int maxNumberOfFloors;

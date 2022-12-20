@@ -8,7 +8,7 @@ import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
 public class StartDate {
-    private static final Logger LOGGER = LogManager.getLogManager().getLogger(String.valueOf(StartDate.class));
+    private static final Logger LOGGER = Logger.getLogger(String.valueOf(StartDate.class));
 
     final public void pass() throws IOException {
         Scanner in = new Scanner(System.in);

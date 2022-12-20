@@ -6,7 +6,7 @@ import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
 public class Stone extends Materials{
-    private static final Logger LOGGER = LogManager.getLogManager().getLogger(String.valueOf(Stone.class));
+    private static final Logger LOGGER = Logger.getLogger(String.valueOf(Stone.class));
     private static String typeOfStone;
     private static int maxWeight;
 

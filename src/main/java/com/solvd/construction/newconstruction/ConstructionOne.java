@@ -7,7 +7,7 @@ import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
 public class ConstructionOne {
-    private static final Logger LOGGER = LogManager.getLogManager().getLogger(String.valueOf(ConstructionOne.class));
+    private static final Logger LOGGER = Logger.getLogger(String.valueOf(ConstructionOne.class));
     public void Build() {
         Building b1 = new Building("Toy Factory For Kids", Type.INDUSTRIAL);
         System.out.printf (b1.name, b1.buildingType);

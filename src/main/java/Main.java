@@ -30,12 +30,9 @@ import static com.solvd.construction.suppliers.Suppliers.createListOfSuppliers;
 import static java.lang.String.valueOf;
 
 public class Main {
-    private static final Logger LOGGER = LogManager.getLogManager().getLogger(String.valueOf(Main.class));
+    private static final Logger LOGGER = Logger.getLogger(String.valueOf(Main.class));
     public static SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
     public static void main(String[] args) {
-        Queue<Request> requests = createQueueList();
-        LOGGER.info("Queue list {}:" + requests);
-
         LinkedList<Builder> builders = createBuilderList();
         LOGGER.info("List Of builders {}:" + builders);
 

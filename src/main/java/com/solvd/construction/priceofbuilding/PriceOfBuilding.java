@@ -17,7 +17,7 @@ public class PriceOfBuilding {
     String ferroconcretePlate = "ferroconcretePlate";
     String wood = "wood";
     public static int price;
-    private static final Logger LOGGER = LogManager.getLogManager().getLogger(valueOf(PriceOfBuilding.class));
+    private static final Logger LOGGER = Logger.getLogger(valueOf(PriceOfBuilding.class));
 
     public void calculationOfThePrice() throws IOException {
         Scanner in = new Scanner(System.in);

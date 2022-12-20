@@ -9,7 +9,7 @@ import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
 public class Request {
-    private static final Logger LOGGER = LogManager.getLogManager().getLogger(String.valueOf(Request.class));
+    private static final Logger LOGGER = Logger.getLogger(String.valueOf(Request.class));
     private int amountOfTheRequest;
     public static void main(String[] args) {
 

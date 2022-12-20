@@ -2,7 +2,6 @@ package com.solvd.construction.building;
 
 import com.solvd.construction.CartographicObject;
 import com.solvd.construction.acceptance.Acceptance;
-import com.solvd.construction.investors.Investors;
 import com.solvd.construction.suppliers.Suppliers;
 
 import java.io.BufferedReader;
@@ -22,16 +21,14 @@ public class Building implements CartographicObject {
     private int startDate;
     private int endDate;
     private Suppliers suppliers;
-    private Investors investors;
 
-    public Building (String buildingType, String placeOfConstruction, String materials, int startDate, int endDate, Suppliers suppliers, Investors investors) {
+    public Building (String buildingType, String placeOfConstruction, String materials, int startDate, int endDate, Suppliers suppliers) {
         this.buildingType = buildingType;
         this.placeOfConstruction = placeOfConstruction;
         this.materials = materials;
         this.startDate = startDate;
         this.endDate = endDate;
         this.suppliers = suppliers;
-        this.investors = investors;
     }
     private static final Logger LOGGER = LogManager.getLogManager().getLogger(String.valueOf(Building.class));
 
@@ -93,12 +90,6 @@ public class Building implements CartographicObject {
     public void setSuppliers(Suppliers suppliers) {
         this.suppliers = suppliers;
     }
-    public Investors getInvestors() {
-        return investors;
-    }
-    public void setInvestors(Investors investors) {
-        this.investors = investors;
-    }
 
     @Override
     public void searchOfBuilding() { }
@@ -112,7 +103,6 @@ public class Building implements CartographicObject {
                 ", placeOfConstruction='" + placeOfConstruction + '\'' +
                 ", materials='" + materials + '\'' +
                 ", suppliers='" + suppliers + '\'' +
-                ", investors='" + investors + '\'' +
                 ", startDate=" + startDate +
                 ", endDate=" + endDate +
                 '}';
@@ -120,7 +110,7 @@ public class Building implements CartographicObject {
 
     @Override
     public int hashCode() {
-        return Objects.hash(buildingType, placeOfConstruction, materials, suppliers, startDate, endDate, investors);
+        return Objects.hash(buildingType, placeOfConstruction, materials, suppliers, startDate, endDate);
     }
 
 
@@ -128,7 +118,7 @@ public class Building implements CartographicObject {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Building building)) return false;
-        return startDate == building.startDate && endDate == building.endDate && Objects.equals(buildingType, building.buildingType) && Objects.equals(placeOfConstruction, building.placeOfConstruction) && Objects.equals(materials, building.materials) && Objects.equals(suppliers, building.suppliers) && Objects.equals(investors, building.investors);
+        return startDate == building.startDate && endDate == building.endDate && Objects.equals(buildingType, building.buildingType) && Objects.equals(placeOfConstruction, building.placeOfConstruction) && Objects.equals(materials, building.materials) && Objects.equals(suppliers, building.suppliers);
     }
 
 }

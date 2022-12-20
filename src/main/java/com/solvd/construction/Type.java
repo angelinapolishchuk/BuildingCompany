@@ -1,7 +1,5 @@
 package com.solvd.construction;
 
-import com.solvd.construction.brigade.Brigade;
-
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
@@ -12,7 +10,7 @@ public enum Type {
     INDUSTRIAL("sectional"), CIVIl("centric");
 
     String layout;
-    private static final Logger LOGGER = LogManager.getLogManager().getLogger(String.valueOf(Type.class));
+    private static final Logger LOGGER = Logger.getLogger(String.valueOf(Type.class));
 
     Type(String layout){
         this.layout = layout;
