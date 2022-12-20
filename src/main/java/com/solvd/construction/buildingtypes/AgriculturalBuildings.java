@@ -1,38 +1,36 @@
 package com.solvd.construction.buildingtypes;
 
-import com.solvd.construction.Type;
-
 public class AgriculturalBuildings extends Buildings{
         private int numberOfCompartments;
-        private int doorWidth;
+        private int priceOfOneCompartment;
 
-        public AgriculturalBuildings(String buildingLayout, int maxNumbersOfFloors, int maxArea, int numberOfCompartments, int doorWidth) {
-            super(Type.valueOf(buildingLayout), maxNumbersOfFloors, maxArea);
+        public AgriculturalBuildings( int maxNumbersOfFloors, int maxArea, int numberOfCompartments, int priceOfOneCompartment) {
+            super (maxNumbersOfFloors, maxArea);
             this.numberOfCompartments = numberOfCompartments;
-            this.doorWidth = doorWidth;
+            this.priceOfOneCompartment = priceOfOneCompartment;
 
         }
 
         public int getNumberOfCompartments() {
-            return numberOfCompartments;
+            return 17;
         }
 
         public void setNumberOfCompartments(int numberOfCompartments) {
-            this.numberOfCompartments = numberOfCompartments;
+            this.numberOfCompartments = 17;
         }
 
-        public int getDoorWidth() {
-            return doorWidth;
+        public int getPriceOfOneCompartment() {
+            return 1000;
         }
 
-        public void setDoorWidth(int doorWidth) {
+        public void setPriceOfOneCompartment(int priceOfOneCompartment) {
 
-            this.doorWidth = doorWidth;
+            this.priceOfOneCompartment = 1000;
         }
-        @Override
-        public void displayBuildingsInformation(){
-
-        }
+    public int calculationOfAgriculturalBuildingsPrice(int numberOfCompartments, int priceOfOneCompartment){
+        int priceOfAgriculturalBuilding = numberOfCompartments * priceOfOneCompartment;
+        return priceOfAgriculturalBuilding;
+    }
 
     }
 

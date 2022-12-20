@@ -1,31 +1,20 @@
 package com.solvd.construction.materials;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.util.logging.LogManager;
-import java.util.logging.Logger;
+public class Stone extends Materials {
 
-public class Stone extends Materials{
-    private static final Logger LOGGER = LogManager.getLogManager().getLogger(String.valueOf(Stone.class));
-    private static String typeOfStone;
-    private static int maxWeight;
+    private int priceOfStone;
 
-    public Stone(String typeOfStone, int maxWeight, int cost) {
+
+    public Stone(int cost, int priceOfStone) {
         super(cost);
-        this.typeOfStone = typeOfStone;
-        this.maxWeight = maxWeight;
-
+        this.priceOfStone = priceOfStone;
     }
+    public void setPriceOfStone(int priceOfStone) {
 
-    public static void main(String[] args) {
-        Stone stone = new Stone("Marble", 500, 250);
-        LOGGER.info(Stone.typeOfStone);
-        LOGGER.info(String.valueOf(Stone.maxWeight));
-
+        this.priceOfStone = 50;
     }
+    public int getPriceOfStone(int i) {
 
-    private static Stone daytime(String typeOfStone) {
-        Stone Granite = Stone.daytime("Granite");
-        return Granite;
+        return 50;
     }
 }

@@ -1,104 +1,71 @@
 package com.solvd.construction.building;
 
 import com.solvd.construction.CartographicObject;
-import com.solvd.construction.acceptance.Acceptance;
-import com.solvd.construction.investors.Investors;
+import com.solvd.construction.buildingtypes.IndustrialBuildings;
+import com.solvd.construction.materials.Materials;
+import com.solvd.construction.staff.Builder;
 import com.solvd.construction.suppliers.Suppliers;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.Objects;
-import java.util.Scanner;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
 public class Building implements CartographicObject {
 
-    private String buildingType;
-    private String placeOfConstruction;
-    private String materials;
-    private int startDate;
-    private int endDate;
-    private Suppliers suppliers;
-    private Investors investors;
+    private IndustrialBuildings priceOfIndustrialBuilding;
+    private Materials endPriceOfMaterials;
+    private LocalDate startDate;
+    private LocalDate endDate;
+    private Suppliers deliveryPrice;
 
-    public Building (String buildingType, String placeOfConstruction, String materials, int startDate, int endDate, Suppliers suppliers, Investors investors) {
-        this.buildingType = buildingType;
-        this.placeOfConstruction = placeOfConstruction;
-        this.materials = materials;
+    private Builder salary;
+
+
+
+    public Building (IndustrialBuildings priceOfIndustrialBuilding, Materials endPriceOfMaterials, LocalDate startDate, LocalDate endDate,Suppliers deliveryPrice, Builder salary) {
+        this.priceOfIndustrialBuilding = priceOfIndustrialBuilding;
+        this.endPriceOfMaterials = endPriceOfMaterials;
         this.startDate = startDate;
         this.endDate = endDate;
-        this.suppliers = suppliers;
-        this.investors = investors;
+        this.deliveryPrice = deliveryPrice;
+        this.salary = salary;
     }
     private static final Logger LOGGER = LogManager.getLogManager().getLogger(String.valueOf(Building.class));
 
-    public static SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
+    public int calculationOfThePrice(IndustrialBuildings priceOfIndustrialBuilding, Materials endPriceOfMaterials, Suppliers deliveryPrice, Builder salary){
 
-
-    public String getBuildingType() {
-
-        return buildingType;
+        return 0;
     }
 
-    public void setBuildingType(String buildingType) {
-
-        this.buildingType = buildingType;
+    public LocalDate calculationOfTheEndDate() {
+        LocalDate startDate = LocalDate.now();
+        LocalDate endDate = startDate.plusMonths(26);
+        LOGGER.info("Start date: " + startDate + ". End date: " + endDate);
+        return getEndDate(endDate);
     }
 
-    public String getPlaceOfConstruction() {
 
-        return placeOfConstruction;
-    }
-
-    public void setPlaceOfConstruction(String placeOfConstruction) {
-
-        this.placeOfConstruction = placeOfConstruction;
-    }
-
-    public String getMaterials() {
-        return materials;
-    }
-
-    public void setMaterials(String materials) {
-
-        this.materials = materials;
-    }
-
-    public int getStartDate() {
+    public LocalDate getStartDate() {
 
         return startDate;
     }
 
-    public void setStartDate(int startDate) {
+    public LocalDate setStartDate(LocalDate startDate) {
 
-        this.startDate = startDate;
+        return startDate;
     }
 
-    public int getEndDate() {
+    public LocalDate getEndDate(LocalDate endDate) {
 
-        return endDate;
+        return this.endDate;
     }
 
-    public void setEndDate(int endDate) {
+    public void setEndDate(LocalDate endDate) {
 
         this.endDate = endDate;
     }
 
-    public Suppliers getSuppliers() {
-        return suppliers;
-    }
-    public void setSuppliers(Suppliers suppliers) {
-        this.suppliers = suppliers;
-    }
-    public Investors getInvestors() {
-        return investors;
-    }
-    public void setInvestors(Investors investors) {
-        this.investors = investors;
-    }
 
     @Override
     public void searchOfBuilding() { }
@@ -108,11 +75,6 @@ public class Building implements CartographicObject {
     @Override
     public String toString() {
         return "Building{" +
-                ", buildingType='" + buildingType + '\'' +
-                ", placeOfConstruction='" + placeOfConstruction + '\'' +
-                ", materials='" + materials + '\'' +
-                ", suppliers='" + suppliers + '\'' +
-                ", investors='" + investors + '\'' +
                 ", startDate=" + startDate +
                 ", endDate=" + endDate +
                 '}';
@@ -120,7 +82,7 @@ public class Building implements CartographicObject {
 
     @Override
     public int hashCode() {
-        return Objects.hash(buildingType, placeOfConstruction, materials, suppliers, startDate, endDate, investors);
+        return Objects.hash(startDate, endDate);
     }
 
 
@@ -128,7 +90,7 @@ public class Building implements CartographicObject {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Building building)) return false;
-        return startDate == building.startDate && endDate == building.endDate && Objects.equals(buildingType, building.buildingType) && Objects.equals(placeOfConstruction, building.placeOfConstruction) && Objects.equals(materials, building.materials) && Objects.equals(suppliers, building.suppliers) && Objects.equals(investors, building.investors);
+        return startDate == building.startDate && endDate == building.endDate;
     }
 
 }

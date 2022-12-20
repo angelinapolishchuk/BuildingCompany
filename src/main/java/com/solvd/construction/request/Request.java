@@ -9,20 +9,20 @@ import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
 public class Request {
-    private static final Logger LOGGER = LogManager.getLogManager().getLogger(String.valueOf(Request.class));
+    private static final Logger LOGGER = Logger.getLogger(String.valueOf(Request.class));
     private int amountOfTheRequest;
-    public static void main(String[] args) {
+    public String acceptTheRequest() {
 
         Scanner scanner = new Scanner(System.in);
         String type = scanner.nextLine();
         int floors = scanner.nextInt();
 
         LOGGER.info("Type " + type);
-        LOGGER.info("Floors " + floors);
+        return type;
     }
     public int getAmountOfTheRequests() {
 
-        return amountOfTheRequest;
+        return 1500000;
     }
 
     public void setAmountOfTheRequest(int amountOfTheRequest) {

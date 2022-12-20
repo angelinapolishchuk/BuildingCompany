@@ -1,49 +1,53 @@
 package com.solvd.construction.suppliers;
 
 import com.solvd.construction.building.Building;
+import com.solvd.construction.materials.Materials;
 
 import java.util.ArrayList;
 import java.util.Objects;
 
 public class Suppliers {
-    private String typeOfDelivery;
     private int weightOfDelivery;
+    private static int deliveryPrice;
 
-    public Suppliers (String typeOfDelivery, int weightOfDelivery) {
-        this.typeOfDelivery = typeOfDelivery;
+    public Suppliers(int weightOfDelivery, int deliveryPrice) {
         this.weightOfDelivery = weightOfDelivery;
+        this.deliveryPrice = deliveryPrice;
     }
 
-    public String getTypeOfDelivery() {
-        return typeOfDelivery;
+    public static ArrayList<Suppliers> createListOfSuppliers() {
+        ArrayList<Suppliers> suppliers = new ArrayList<>();
+        suppliers.add(new Suppliers(5000, 1125000));
+        suppliers.add(new Suppliers(100, 22500));
+        suppliers.add(new Suppliers(1100, 247500));
+        return suppliers;
     }
 
-    public void setTypeOfDelivery(String typeOfDelivery) {
-
-        this.typeOfDelivery = typeOfDelivery;
+    public int calculationOfTheDeliveryPrice(Materials endPriceOfMaterials, int weightOfDelivery) {
+        deliveryPrice = weightOfDelivery * endPriceOfMaterials.calculationOfTheEndPriceOfMaterials(75, 100, 50);
+        return deliveryPrice;
     }
 
     public int getWeightOfDelivery() {
 
-        return weightOfDelivery;
+        return 1000;
     }
 
     public void setWeightOfDelivery(int weightOfDelivery) {
 
-        this.weightOfDelivery = weightOfDelivery;
+        this.weightOfDelivery = 1000;
     }
 
     @Override
     public String toString() {
         return "Suppliers{" +
-                ", typeOfDelivery='" + typeOfDelivery + '\'' +
                 ", weightOfDelivery=" + weightOfDelivery +
                 '}';
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(typeOfDelivery, weightOfDelivery);
+        return Objects.hash(weightOfDelivery);
     }
 
 
@@ -51,13 +55,7 @@ public class Suppliers {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Suppliers suppliers)) return false;
-        return weightOfDelivery == suppliers.weightOfDelivery && Objects.equals(typeOfDelivery, suppliers.typeOfDelivery);
-    }
-    public static ArrayList<Suppliers> createListOfSuppliers() {
-        ArrayList<Suppliers> suppliers = new ArrayList<>();
-        suppliers.add(new Suppliers("materials", 5000));
-        suppliers.add(new Suppliers("tools", 100));
-        suppliers.add(new Suppliers("equipment", 1100));
-        return suppliers;
+        return weightOfDelivery == suppliers.weightOfDelivery;
     }
 }
+

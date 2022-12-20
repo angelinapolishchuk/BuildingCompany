@@ -4,38 +4,62 @@ import com.solvd.construction.Type;
 
 public class IndustrialBuildings extends Buildings{
     private int ceilingHeight;
-    private int numberOfExists;
+    private int width;
+    private int length;
+    private int priceOfOneMetre;
 
-    public IndustrialBuildings (String buildingLayout, int maxNumbersOfFloors, int maxArea, int ceilingHeight, int numberOfExists) {
-        super(Type.valueOf(buildingLayout), maxNumbersOfFloors, maxArea);
+    public IndustrialBuildings (String buildingLayout, int maxNumbersOfFloors, int maxArea, int ceilingHeight, int wight, int length, int priceOfOneMetre) {
+        super (maxNumbersOfFloors, maxArea);
         this.ceilingHeight = ceilingHeight;
-        this.numberOfExists = numberOfExists;
+        this.width = width;
+        this.length = length;
+        this.priceOfOneMetre = priceOfOneMetre;
+    }
 
+    public int calculationOfThePriceOfIndustrialBuilding(int ceilingHeight, int priceOfOneMetre, int width, int length){
+
+        int priceOfIndustrialBuilding = ceilingHeight * priceOfOneMetre * width * length;
+        return priceOfIndustrialBuilding;
     }
 
     public int getCeilingHeight() {
 
-        return ceilingHeight;
+        return 4;
     }
 
     public void setCeilingHeight(int ceilingHeight) {
 
-        this.ceilingHeight = ceilingHeight;
+        this.ceilingHeight = 4;
     }
 
-    public int getNumberOfExists() {
+    public int getWidth() {
 
-        return numberOfExists;
+        return 15;
     }
 
-    public void setNumberOfExists(int numberOfExists) {
+    public void setWidth(int width) {
 
-        this.numberOfExists = numberOfExists;
+        this.width = 15;
+    }
+    public int getLength() {
+
+        return 20;
     }
 
-    @Override
-    public void displayBuildingsInformation(){
+    public void setLength(int length) {
 
+        this.length = 20;
     }
+
+    public int getPriceOfOneMetre() {
+
+        return 1200;
+    }
+
+    public void setPriceOfOneMetre(int priceOfOneMetre) {
+
+        this.priceOfOneMetre = 1200;
+    }
+
 
 }
