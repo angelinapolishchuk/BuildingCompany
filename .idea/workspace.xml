@@ -5,34 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="474ea609-7490-4d12-95c9-922260cc54c0" name="Changes" comment="Commit message.">
-      <change afterPath="$PROJECT_DIR$/.idea/log4j2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/materials/Materials.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/priceofbuilding/PriceOfBuilding.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/startdate/StartDate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/CartographicObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/CartographicObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/Type.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/Type.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/acceptance/Acceptance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/acceptance/Acceptance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/brigade/Brigade.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/building/Building.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/building/Building.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/buildingtypes/AgriculturalBuildings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/buildingtypes/AgriculturalBuildings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/buildingtypes/Buildings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/buildingtypes/Buildings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/buildingtypes/IndustrialBuildings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/buildingtypes/IndustrialBuildings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/exceptions/EAmountOfContributionsException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/exceptions/EBrigadeException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/exceptions/EBuildingsException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/exceptions/EPeopleException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/exceptions/ETypeOfStoneException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/investors/Investors.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/materials/FerroconcretePlate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/materials/FerroconcretePlate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/materials/Stone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/materials/Stone.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/materials/Wood.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/materials/Wood.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/newconstruction/ConstructionOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/newconstruction/ConstructionOne.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/request/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/request/Request.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/staff/Builder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/staff/Builder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/staff/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/staff/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/suppliers/Suppliers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/suppliers/Suppliers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/exceptions/EBrigadeException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BuildingCompany/BuildingCompany.iml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,14 +133,7 @@
       <option name="project" value="LOCAL" />
       <updated>1671197369184</updated>
     </task>
-    <task id="LOCAL-00003" summary="Commit message.">
-      <created>1671442566751</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1671442566751</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -254,11 +223,6 @@
           <url>jar:///Library/Java/JavaVirtualMachines/jdk-19.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/Object.java</url>
           <line>256</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/solvd/construction/staff/Person.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
