@@ -1,6 +1,7 @@
 package com.solvd.construction.buildingtypes;
 
 import com.solvd.construction.Type;
+import com.solvd.construction.exceptions.EBuildingsException;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -13,6 +14,7 @@ public abstract class Buildings {
     private static final Logger LOGGER = Logger.getLogger(String.valueOf(Buildings.class));
     private int maxNumberOfFloors;
     private int maxArea;
+    private static int priceOfTheBuilding;
 
 
     public Buildings(int maxNumberOfFloors, int maxArea) {
@@ -20,26 +22,32 @@ public abstract class Buildings {
         this.maxArea = maxArea;
     }
 
-    public String typeSelection() throws IOException {
+    public static String getBuildingType() throws IOException, EBuildingsException {
+        return typeSelection();
+    }
+
+    public static String typeSelection() throws EBuildingsException, IOException {
         Scanner in = new Scanner(System.in);
         final BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        LOGGER.info("Choose the building type from the list of buildings types:");
+        LOGGER.info("Enter the type of building you need: ");
         final String buildingType = reader.readLine();
         LOGGER.info("Building type – " + buildingType);
         return buildingType;
     }
 
-    public IndustrialBuildings selectionOfThePrice(AgriculturalBuildings priceOfAgriculturalBuilding, CivilBuildings priceOfCivilBuilding, IndustrialBuildings priceOfIndustrialBuilding) {
-        String type = "industrial";
-        if (type == "agricultural") {
-            AgriculturalBuildings priceOfTheBuilding = priceOfAgriculturalBuilding;
-        } else if (type == "civil") {
-            CivilBuildings priceOfTheBuilding = priceOfCivilBuilding;
-        } else if (type == "industrial") {
-            IndustrialBuildings priceOfTheBuilding = priceOfIndustrialBuilding;
-            return priceOfTheBuilding;
-        }
-        return priceOfIndustrialBuilding;
+    public static int getPriceOfTheBuilding() throws IOException, EBuildingsException {
+        return selectionOfThePrice(AgriculturalBuildings.getPriceOfAgriculturalBuilding(), CivilBuildings.getPriceOfCivilBuilding(),IndustrialBuildings.getPriceOfIndustrialBuilding());
+    }
+
+    public static int selectionOfThePrice(int priceOfAgriculturalBuilding, int priceOfCivilBuilding, int priceOfIndustrialBuilding) throws IOException, EBuildingsException {
+        if (getBuildingType() == "agricultural") {
+            priceOfTheBuilding = AgriculturalBuildings.getPriceOfAgriculturalBuilding();
+        } else if (getBuildingType() == "civil") {
+            priceOfTheBuilding = CivilBuildings.getPriceOfCivilBuilding();
+        } else if (getBuildingType() == "industrial") {
+            priceOfTheBuilding = IndustrialBuildings.getPriceOfIndustrialBuilding();
+            return priceOfTheBuilding;}
+        return priceOfAgriculturalBuilding;
     }
 }
 

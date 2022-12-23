@@ -1,27 +1,34 @@
 package com.solvd.construction.staff;
 
+
+import com.solvd.construction.exceptions.EBuilderException;
+
 public class ConstructorTechnician extends Builder{
 
    private double surchargeCoefficientForCT = 1.2;
-   private double surchargeCT;
+   private static double surchargeCT;
 
-    public ConstructorTechnician(String firstName, String lastName, int age, int experience, double surchargeCoefficientForCT, double surchargeCT) {
+    public ConstructorTechnician(String firstName, String lastName, int age, int experience, double surchargeCoefficientForCT, double surchargeCT) throws EBuilderException {
         super(firstName, lastName, age, experience);
         this.surchargeCoefficientForCT = surchargeCoefficientForCT;
         this.surchargeCT = surchargeCT;
     }
-    public double calculationOfTheSurcharge(Builder salary){
-        surchargeCT = calculationOfSalary(3,500) * surchargeCoefficientForCT;
+
+
+
+    public static double calculationOfTheSurcharge(int salary) {
+        surchargeCT = calculationOfSalary(3, 500) * getSurchargeCoefficientForCT(1.2);
         return surchargeCT;
     }
-    public double getSurchargeCT() {
-        return surchargeCT;
+
+    public static double getSurchargeCT() {
+        return calculationOfTheSurcharge(500);
     }
 
     public double setSurchargeCT(int surchargeCT) {
         return surchargeCT;
     }
-    public double getSurchargeCoefficientForCT() {
+    public static double getSurchargeCoefficientForCT(double v) {
         return 1.2;
     }
 

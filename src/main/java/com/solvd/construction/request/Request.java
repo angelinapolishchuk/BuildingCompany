@@ -1,6 +1,7 @@
 package com.solvd.construction.request;
 
 import com.solvd.construction.buildingtypes.CivilBuildings;
+import com.solvd.construction.staff.Builder;
 
 import java.util.PriorityQueue;
 import java.util.Queue;
@@ -20,9 +21,9 @@ public class Request {
         LOGGER.info("Type " + type);
         return type;
     }
-    public int getAmountOfTheRequests() {
+    public int getAmountOfTheRequest() {
 
-        return 1500000;
+        return amountOfTheRequest;
     }
 
     public void setAmountOfTheRequest(int amountOfTheRequest) {
@@ -33,7 +34,7 @@ public class Request {
 
         this.amountOfTheRequest = amountOfTheRequest;
     }
-    public static Queue<Request> createQueueList() {
+    public Queue<Request> createQueueList() {
         Queue<Request> requests = new PriorityQueue<>();
         Request Request1 = new Request(120000);
         Request Request2 = new Request(150000);
@@ -42,6 +43,12 @@ public class Request {
         requests.add(Request2);
         requests.add(Request3);
         return requests;
-    }
-}
 
+    }
+    {double calculationOfAllAmounts = createQueueList().stream()
+            .mapToInt(Request::getAmountOfTheRequest)
+            .summaryStatistics()
+            .getSum();
+    LOGGER.info("Sum of all amounts: " + calculationOfAllAmounts);}
+
+}

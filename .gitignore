@@ -29,3 +29,8 @@ bin/
 .DS_Store
 /src/com/solvd/construction/exceptions/EBrigadeException.java
 /src/main/java/com/solvd/construction/exceptions/EBrigadeException.java
+/src/main/java/com/solvd/construction/exceptions/EBuilderException.java
+/src/main/java/com/solvd/construction/exceptions/EBuildingsException.java
+/src/main/java/com/solvd/construction/exceptions/ELastNameException.java
+/src/main/java/com/solvd/construction/exceptions/EFirstNameException.java
+/src/main/java/com/solvd/construction/exceptions/EAgeException.java

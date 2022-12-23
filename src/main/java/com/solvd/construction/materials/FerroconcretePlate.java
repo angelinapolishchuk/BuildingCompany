@@ -1,12 +1,17 @@
 package com.solvd.construction.materials;
 
+import com.solvd.construction.building.Building;
+import com.solvd.construction.request.Request;
+
 import java.util.HashSet;
 import java.util.Set;
+import java.util.logging.Logger;
 
 public class FerroconcretePlate extends Materials{
     private int plateLengths;
     private int plateWidths;
     private static int priceOfFeroconcretePlate;
+    private static final Logger LOGGER = Logger.getLogger(String.valueOf(FerroconcretePlate.class));
 
 
     public FerroconcretePlate (int plateLengths, int plateWidths, int endPriceOfMaterials, int priceOfFeroconcretePlate) {
@@ -16,18 +21,19 @@ public class FerroconcretePlate extends Materials{
         this.priceOfFeroconcretePlate = priceOfFeroconcretePlate;
     }
 
+    public static int getPriceOfFerroconcretePlate() {
+        return 100;
+    }
+
     public int getPlateLengths() {
 
         return 4000;
     }
 
-    public void setPriceOfFeroconcretePlate(int priceOfFeroconcretePlate) {
+    public int setPriceOfFeroconcretePlate(int priceOfFeroconcretePlate) {
 
         this.priceOfFeroconcretePlate = 100;
-    }
-    public int getPriceOfFeroconcretePlate(int i) {
-
-        return 100;
+        return priceOfFeroconcretePlate;
     }
 
     public void setPlateLengths(int plateLengths) {
@@ -54,6 +60,13 @@ public class FerroconcretePlate extends Materials{
         ferroconcretePlates.add(FerroconcretePlate2);
         ferroconcretePlates.add(FerroconcretePlate3);
         return ferroconcretePlates;
+
     }
+    {double averagePlateLengths = createFerroconcretePlateList().stream()
+            .mapToInt(FerroconcretePlate::getPlateLengths)
+            .summaryStatistics()
+            .getAverage();
+    LOGGER.info("AveragePlateLengths: " + averagePlateLengths);}
+
 }
 

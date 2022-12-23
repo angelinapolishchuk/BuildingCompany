@@ -16,13 +16,17 @@ public class IndustrialBuildings extends Buildings{
         this.priceOfOneMetre = priceOfOneMetre;
     }
 
-    public int calculationOfThePriceOfIndustrialBuilding(int ceilingHeight, int priceOfOneMetre, int width, int length){
+    public static int getPriceOfIndustrialBuilding() {
+        return calculationOfThePriceOfIndustrialBuilding(4,1200,15,20);
+    }
 
-        int priceOfIndustrialBuilding = ceilingHeight * priceOfOneMetre * width * length;
+    public static int calculationOfThePriceOfIndustrialBuilding(int ceilingHeight, int priceOfOneMetre, int width, int length){
+
+        int priceOfIndustrialBuilding = getCeilingHeight() * getPriceOfOneMetre() * getWidth() * getLength();
         return priceOfIndustrialBuilding;
     }
 
-    public int getCeilingHeight() {
+    public static int getCeilingHeight() {
 
         return 4;
     }
@@ -32,7 +36,7 @@ public class IndustrialBuildings extends Buildings{
         this.ceilingHeight = 4;
     }
 
-    public int getWidth() {
+    public static int getWidth() {
 
         return 15;
     }
@@ -41,7 +45,7 @@ public class IndustrialBuildings extends Buildings{
 
         this.width = 15;
     }
-    public int getLength() {
+    public static int getLength() {
 
         return 20;
     }
@@ -51,7 +55,7 @@ public class IndustrialBuildings extends Buildings{
         this.length = 20;
     }
 
-    public int getPriceOfOneMetre() {
+    public static int getPriceOfOneMetre() {
 
         return 1200;
     }

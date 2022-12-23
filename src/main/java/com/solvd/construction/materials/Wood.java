@@ -1,12 +1,16 @@
 package com.solvd.construction.materials;
 
+import com.solvd.construction.building.Building;
+
 import java.util.LinkedList;
 import java.util.List;
+import java.util.logging.Logger;
 
 public class Wood extends Materials{
     private String typeOfWood;
     private int amountOfWood;
     protected static int priceOfWood;
+    private static final Logger LOGGER = Logger.getLogger(String.valueOf(Wood.class));
 
     public Wood (String typeOfWood, int amountOfWood, int cost, int priceOfWood) {
         super(cost);
@@ -19,9 +23,9 @@ public class Wood extends Materials{
 
         this.priceOfWood = 75;
     }
-    public int getPriceOfWood(int i) {
+    public static int getPriceOfWood() {
 
-        return 75;
+        return priceOfWood;
     }
 
     public String getTypeOfWood() {
@@ -54,5 +58,16 @@ public class Wood extends Materials{
         woods.add(Wood3.getAmountOfWood());
         return woods;
     }
+    {double calculationOfPriceOfWood = createWoodList().stream()
+            .mapToInt(Wood::getPriceOfWood)
+            .summaryStatistics()
+            .getSum();
+        LOGGER.info("CalculationOfPriceOfWood: " + calculationOfPriceOfWood);}
+
+    private static int getPriceOfWood(Integer integer) {
+        return priceOfWood;
+    }
+
+
 }
 

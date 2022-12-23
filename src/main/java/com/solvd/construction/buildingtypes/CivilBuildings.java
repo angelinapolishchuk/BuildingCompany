@@ -29,8 +29,11 @@ public class CivilBuildings extends Buildings{
         this.numberOfApartments = 30000;
     }
 
-    public int calculationOfCivilBuildingsPrice(int numberOfApartments, int priceOfOneApartment){
+    public static int calculationOfCivilBuildingsPrice(int numberOfApartments, int priceOfOneApartment){
         int priceOfCivilBuilding = numberOfApartments * priceOfOneApartment;
         return priceOfCivilBuilding;
+    }
+    public static int getPriceOfCivilBuilding() {
+        return calculationOfCivilBuildingsPrice(235, 30000);
     }
 }

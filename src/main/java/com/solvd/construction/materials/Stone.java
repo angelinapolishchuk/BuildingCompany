@@ -13,7 +13,7 @@ public class Stone extends Materials {
 
         this.priceOfStone = 50;
     }
-    public int getPriceOfStone(int i) {
+    public static int getPriceOfStone() {
 
         return 50;
     }

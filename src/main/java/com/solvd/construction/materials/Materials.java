@@ -6,13 +6,13 @@ import java.util.Set;
 
 public class Materials {
 
-    private int endPriceOfMaterials;
+    private static int endPriceOfMaterials;
 
     public Materials(int endPriceOfMaterials) {
         this.endPriceOfMaterials = endPriceOfMaterials;
     }
 
-    public int getEndPriceOfMaterials() {
+    public static int getEndPriceOfMaterials() {
 
         return calculationOfTheEndPriceOfMaterials(75, 100, 50);
     }
@@ -34,8 +34,9 @@ public class Materials {
         return materials;
     }
 
-    public int calculationOfTheEndPriceOfMaterials(int priceOfWood, int priceOfFerroconcretePlate, int priceOfStone) {
-        endPriceOfMaterials = priceOfFerroconcretePlate + priceOfStone + priceOfWood;
+    public static int calculationOfTheEndPriceOfMaterials(int priceOfWood, int priceOfFerroconcretePlate, int priceOfStone) {
+        endPriceOfMaterials = FerroconcretePlate.getPriceOfFerroconcretePlate() + Stone.getPriceOfStone() + Wood.getPriceOfWood();
         return endPriceOfMaterials;
     }
+
 }

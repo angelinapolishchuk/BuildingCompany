@@ -11,15 +11,19 @@ public class AgriculturalBuildings extends Buildings{
 
         }
 
-        public int getNumberOfCompartments() {
+        public static int getNumberOfCompartments() {
             return 17;
         }
 
-        public void setNumberOfCompartments(int numberOfCompartments) {
+    public static int getPriceOfAgriculturalBuilding() {
+        return calculationOfAgriculturalBuildingsPrice(17,1000);
+    }
+
+    public void setNumberOfCompartments(int numberOfCompartments) {
             this.numberOfCompartments = 17;
         }
 
-        public int getPriceOfOneCompartment() {
+        public static int getPriceOfOneCompartment() {
             return 1000;
         }
 
@@ -27,8 +31,8 @@ public class AgriculturalBuildings extends Buildings{
 
             this.priceOfOneCompartment = 1000;
         }
-    public int calculationOfAgriculturalBuildingsPrice(int numberOfCompartments, int priceOfOneCompartment){
-        int priceOfAgriculturalBuilding = numberOfCompartments * priceOfOneCompartment;
+    public static int calculationOfAgriculturalBuildingsPrice(int numberOfCompartments, int priceOfOneCompartment){
+        int priceOfAgriculturalBuilding = getNumberOfCompartments() * getPriceOfOneCompartment();
         return priceOfAgriculturalBuilding;
     }
 
