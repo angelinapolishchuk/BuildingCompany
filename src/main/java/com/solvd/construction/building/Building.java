@@ -10,11 +10,15 @@ import com.solvd.construction.materials.Materials;
 import com.solvd.construction.staff.Builder;
 import com.solvd.construction.suppliers.Suppliers;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.time.LocalDate;
 import java.util.Objects;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
+
+import static com.solvd.construction.buildingtypes.Buildings.getPriceOfBuilding;
 
 public class Building implements CartographicObject {
 
@@ -27,7 +31,9 @@ public class Building implements CartographicObject {
     private Suppliers deliveryPrice;
 
     private Builder salary;
-    private String nameOfBuilding;
+    private String nameOfBuilding = "summer";
+    private static int priceOfTheBuilding;
+
 
     public Building (AgriculturalBuildings priceOfAgriculturalBuilding, CivilBuildings priceOfCivilBuilding, IndustrialBuildings priceOfIndustrialBuilding, Materials endPriceOfMaterials, LocalDate startDate, LocalDate endDate,Suppliers deliveryPrice, Builder salary,String nameOfBuilding) {
         this.priceOfIndustrialBuilding = priceOfIndustrialBuilding;
@@ -39,6 +45,7 @@ public class Building implements CartographicObject {
         this.deliveryPrice = deliveryPrice;
         this.salary = salary;
         this.nameOfBuilding = nameOfBuilding;
+
     }
     private static final Logger LOGGER = Logger.getLogger(String.valueOf(Building.class));
 
@@ -102,10 +109,11 @@ public class Building implements CartographicObject {
     public String getNameOfBuilding() {
 
         return nameOfBuilding;
-
-
     }
 
+    public Building(String nameOfBuilding) {
+        setNameOfBuilding(nameOfBuilding);
+    }
     @Override
     public void searchOfBuilding() {
 

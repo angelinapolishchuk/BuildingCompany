@@ -5,49 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="474ea609-7490-4d12-95c9-922260cc54c0" name="Changes" comment="Commit message.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/MyLambdas.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/mylinkedlist/LinkedListElement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/mylinkedlist/MyLinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/reflection/Reflection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/buildingcompany/ProjectsOfBuildingCompany.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BuildingCompanyCopy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BuildingCompanyCopy.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UniqueWords.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UniqueWords.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/building/Building.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/building/Building.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/buildingtypes/AgriculturalBuildings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/buildingtypes/AgriculturalBuildings.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/buildingtypes/Buildings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/buildingtypes/Buildings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/buildingtypes/CivilBuildings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/buildingtypes/CivilBuildings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/buildingtypes/IndustrialBuildings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/buildingtypes/IndustrialBuildings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/materials/FerroconcretePlate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/materials/FerroconcretePlate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/materials/Materials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/materials/Materials.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/materials/Stone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/materials/Stone.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/materials/Wood.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/materials/Wood.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/request/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/request/Request.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/exceptions/EBuilderException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/exceptions/EBuilderException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/exceptions/EBuildingsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/exceptions/EBuildingsException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/reflection/Reflection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/reflection/Reflection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/staff/Builder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/staff/Builder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/staff/ConstructionEngineer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/staff/ConstructionEngineer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/staff/ConstructorTechnician.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/staff/ConstructorTechnician.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/staff/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/staff/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/suppliers/Suppliers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/suppliers/Suppliers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/UniqueWords.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/UniqueWords.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/building/Building.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/building/Building.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/buildingtypes/AgriculturalBuildings.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/buildingtypes/AgriculturalBuildings.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/buildingtypes/Buildings.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/buildingtypes/Buildings.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/buildingtypes/CivilBuildings.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/buildingtypes/CivilBuildings.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/buildingtypes/IndustrialBuildings.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/buildingtypes/IndustrialBuildings.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/materials/FerroconcretePlate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/materials/FerroconcretePlate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/materials/Materials.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/materials/Materials.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/materials/Stone.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/materials/Stone.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/materials/Wood.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/materials/Wood.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/request/Request.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/request/Request.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/exceptions/EBuilderException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/exceptions/EBuilderException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/exceptions/EBuildingsException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/exceptions/EBuildingsException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/reflection/Reflection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/reflection/Reflection.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/staff/Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/staff/Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/staff/ConstructionEngineer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/staff/ConstructionEngineer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/staff/ConstructorTechnician.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/staff/ConstructorTechnician.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/staff/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/staff/Person.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/suppliers/Suppliers.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/suppliers/Suppliers.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -256,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671828197648</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Commit message.">
+      <created>1672677760208</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1672677760208</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">

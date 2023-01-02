@@ -24,7 +24,7 @@ public class Person {
             Scanner scanner = new Scanner(System.in);
             String firstName = scanner.nextLine();
             if (firstName == null);
-            throw new EFirstNameException("Enter the last name once again: ");
+            throw new EFirstNameException("Enter the last name correctly! ");
         } catch (EFirstNameException e) {
             LOGGER.info(e.getMessage());
         } finally {

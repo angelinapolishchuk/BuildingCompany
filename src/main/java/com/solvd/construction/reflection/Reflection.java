@@ -34,6 +34,25 @@ public class Reflection {
             }
         }
 
+        Field nameOfBuilding = building.getClass().getDeclaredField("nameOfBuilding");
+        nameOfBuilding.setAccessible(true);
+        LOGGER.info("Old value: " + nameOfBuilding.get(nameOfBuilding));
+        nameOfBuilding.set(building, "Megapolis");
+        LOGGER.info("New value: " + nameOfBuilding.get(nameOfBuilding) + "\n");
+
+        Method[] methods = building.getClass().getDeclaredMethods();
+        Arrays.stream(methods).forEach(method ->
+                LOGGER.info("\n Return type: " + method.getReturnType()
+                        + "\n Modifiers: " + Modifier.toString(method.getModifiers())
+                        + "\n Method name: " + method.getName()
+                        + "\n Input parameters: " + Arrays.toString(method.getParameters()) + "\n")
+        );
+
+        Method method = building.getClass().getDeclaredMethod("getBuildingOptions");
+        LOGGER.info(method.invoke(building).toString());
+        Method method1 = building.getClass().getDeclaredMethod("Type", Type.class);
+        LOGGER.info(method1.invoke(building, Type.class).toString());
     }
-    }
+}
+
 

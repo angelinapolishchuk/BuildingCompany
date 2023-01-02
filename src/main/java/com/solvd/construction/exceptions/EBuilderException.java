@@ -1,7 +1,7 @@
 package com.solvd.construction.exceptions;
 
 public class EBuilderException extends Exception {
-    public int hashCode() {
-        return 1;
+    public EBuilderException(String message) {
+        super(message);
     }
 }

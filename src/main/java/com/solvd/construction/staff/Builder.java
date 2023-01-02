@@ -29,7 +29,7 @@ public class Builder extends Person{
         }
     public ArrayList<Builder> createListOfBuilders() throws EBuilderException {
         ArrayList<Builder> builders = new ArrayList<>();
-        builders.add(new Builder("Павел", "Петров", 22, setExperience(3)));
+        builders.add(new Builder("Павел", "Петриков", 22, setExperience(4)));
         builders.add(new Builder("Самвел", "Петриков", 25, setExperience(7)));
         builders.add(new Builder("Пётр", "Сидоров", 32, setExperience(12)));
         builders.forEach(builder -> {
