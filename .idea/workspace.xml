@@ -4,25 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="474ea609-7490-4d12-95c9-922260cc54c0" name="Changes" comment="Commit message.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/buildingcompany/ProjectsOfBuildingCompany.java" afterDir="false" />
+    <list default="true" id="474ea609-7490-4d12-95c9-922260cc54c0" name="Changes" comment="Merge remote-tracking branch 'origin/main'">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/connectionpool/ConnectionPool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/connectionpool/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/building/Building.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/building/Building.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/buildingtypes/Buildings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/buildingtypes/Buildings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/exceptions/EBuilderException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/exceptions/EBuilderException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/exceptions/EBuildingsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/exceptions/EBuildingsException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/reflection/Reflection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/reflection/Reflection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/staff/Builder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/staff/Builder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/staff/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/staff/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/building/Building.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/building/Building.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/buildingtypes/Buildings.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/buildingtypes/Buildings.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/exceptions/EBuilderException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/exceptions/EBuilderException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/exceptions/EBuildingsException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/exceptions/EBuildingsException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/reflection/Reflection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/reflection/Reflection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/staff/Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/staff/Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/staff/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/staff/Person.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672677760208</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Merge remote-tracking branch 'origin/main'">
+      <created>1672959159394</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1672959159394</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -319,7 +311,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commit message." />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit message." />
+    <MESSAGE value="Merge remote-tracking branch 'origin/main'" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/main'" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
