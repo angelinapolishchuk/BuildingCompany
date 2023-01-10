@@ -26,18 +26,11 @@ import static java.lang.String.valueOf;
 public class Main {
 
     private Building building;
-    private Buildings buildings;
+
     private static int priceOfTheBuilding;
 
     private static final Logger LOGGER = Logger.getLogger(String.valueOf(Main.class));
     public static void main(String[] args) throws IOException, EBuildingsException {
-
-        LOGGER.info("Hello! Please, follow the instructions and fill out the form for calculating the construction of your building. Approximate construction start date: " + Building.getStartDate());
-        LOGGER.info("On average, the construction of a building takes 26 months. Approximate construction end date: " + Building.getEndDate());
-        LOGGER.info("Our company builds three types of buildings, the prices of which are listed below.");
-        LOGGER.info("Price of the industrial building is: " + Building.getPrice1());
-        LOGGER.info("Price of the civil building is: " + Building.getPrice2());
-        LOGGER.info("Price of the agricultural building is: " + Building.getPrice3());
 
         Scanner sc = new Scanner(System.in);
         LOGGER.info("Please, enter the type of building you need: ");
@@ -59,9 +52,14 @@ public class Main {
             }
         }
 
+        LOGGER.info("Approximate construction start date: " + Building.getStartDate());
+        LOGGER.info("On average, the construction of a building takes 26 months. Approximate construction end date: " + Building.getEndDate());
+
         LOGGER.info("Please, enter your budget to calculate if you need a credit for the construction: ");
         final int budget = sc.nextInt();
         LOGGER.info("Check up: your budget is  " + budget);
+
+        Buildings NewBuilding = new Buildings(budget);
 
         if (budget < priceOfTheBuilding) {
             LOGGER.info("You need a credit. The sum of credit is " + (priceOfTheBuilding - budget));
@@ -69,7 +67,19 @@ public class Main {
             LOGGER.info("You don't need a credit. We can start the construction. Your rest sum is " + (budget - priceOfTheBuilding));
         }
         sc.close();
+
+        if (budget > priceOfTheBuilding) {
+            Buildings AcceptedBuilding = new Buildings(25,2000);
+            ArrayList<Buildings> buildings = new ArrayList<>();
+            buildings.add(AcceptedBuilding);
+            LOGGER.info(AcceptedBuilding.toString());
+        } else if (budget < priceOfTheBuilding) {
+            LOGGER.info("Sorry, you can't construct this building");
+        }
+        sc.close();
+
     }
     }
+
 
 

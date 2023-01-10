@@ -6,7 +6,7 @@ import com.solvd.construction.exceptions.EBuilderException;
 public class ConstructorTechnician extends Builder{
 
    private double surchargeCoefficientForCT = 1.2;
-   private static double surchargeCT;
+   private double surchargeCT;
 
     public ConstructorTechnician(String firstName, String lastName, int age, int experience, double surchargeCoefficientForCT, double surchargeCT) throws EBuilderException {
         super(firstName, lastName, age, experience);
@@ -16,19 +16,19 @@ public class ConstructorTechnician extends Builder{
 
 
 
-    public static double calculationOfTheSurcharge(int salary) {
-        surchargeCT = calculationOfSalary(3, 500) * getSurchargeCoefficientForCT(1.2);
+    public double calculationOfTheSurcharge(int salary) {
+        surchargeCT = calculationOfSalary(3, 500) * getSurchargeCoefficientForCT(1.2) * Math.random();
         return surchargeCT;
     }
 
-    public static double getSurchargeCT() {
+    public double getSurchargeCT() {
         return calculationOfTheSurcharge(500);
     }
 
     public double setSurchargeCT(int surchargeCT) {
         return surchargeCT;
     }
-    public static double getSurchargeCoefficientForCT(double v) {
+    public double getSurchargeCoefficientForCT(double v) {
         return 1.2;
     }
 

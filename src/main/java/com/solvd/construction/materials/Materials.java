@@ -35,7 +35,7 @@ public class Materials {
     }
 
     public static int calculationOfTheEndPriceOfMaterials(int priceOfWood, int priceOfFerroconcretePlate, int priceOfStone) {
-        endPriceOfMaterials = FerroconcretePlate.getPriceOfFerroconcretePlate() + Stone.getPriceOfStone() + Wood.getPriceOfWood();
+        endPriceOfMaterials = (int) (FerroconcretePlate.getPriceOfFerroconcretePlate() + Stone.getPriceOfStone() + Wood.getPriceOfWood() + Math.random());
         return endPriceOfMaterials;
     }
 

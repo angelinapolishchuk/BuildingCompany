@@ -1,9 +1,13 @@
 package com.solvd.construction.staff;
 
+import com.solvd.construction.building.Building;
 import com.solvd.construction.exceptions.EBuilderException;
+import com.solvd.construction.materials.Materials;
 
 import java.util.ArrayList;
 import java.util.Locale;
+import java.util.Optional;
+import java.util.function.Supplier;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
 import java.util.stream.Stream;
@@ -18,7 +22,37 @@ public class Builder extends Person{
             this.experience = experience;
         }
 
+    Building AgriculturalBuilding = new Building(2000000);
+    Building CivilBuilding = new Building(500000);
+    Building IndustrialBuilding = new Building(1000000);
+    public ArrayList<Building> createListOfBuilding(){
+        ArrayList<Building> building = new ArrayList<>();
+        building.add(AgriculturalBuilding);
+        building.add(CivilBuilding);
+        building.add(IndustrialBuilding);
+        Optional<Building> any = building.stream().findAny();
+        LOGGER.info((Supplier<String>) any.get());
+        return building;
+    }
 
+    Materials Stone1 = new Materials(2000);
+    Materials Wood1 = new Materials(3000);
+    Materials FerroconcretePlate1 = new Materials(6000);
+    Materials Stone2 = new Materials(5000);
+    Materials Wood2 = new Materials(1000);
+    Materials FerroconcretePlate2 = new Materials(8000);
+    public ArrayList<Materials> createListOfMaterials(){
+        ArrayList<Materials> materials = new ArrayList<>();
+        materials.add(Stone1);
+        materials.add(Wood1);
+        materials.add(FerroconcretePlate1);
+        materials.add(Stone2);
+        materials.add(Wood2);
+        materials.add(FerroconcretePlate2);
+        Optional<Materials> any = materials.stream().findAny();
+        LOGGER.info((Supplier<String>) any.get());
+        return materials;
+    }
 
     public int getExperience() {
             return experience;

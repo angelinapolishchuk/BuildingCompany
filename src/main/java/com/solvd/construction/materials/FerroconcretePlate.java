@@ -10,7 +10,7 @@ import java.util.logging.Logger;
 public class FerroconcretePlate extends Materials{
     private int plateLengths;
     private int plateWidths;
-    private static int priceOfFeroconcretePlate;
+    private int priceOfFeroconcretePlate;
     private static final Logger LOGGER = Logger.getLogger(String.valueOf(FerroconcretePlate.class));
 
 
@@ -22,7 +22,7 @@ public class FerroconcretePlate extends Materials{
     }
 
     public static int getPriceOfFerroconcretePlate() {
-        return 100;
+        return (int) (100 * Math.random());
     }
 
     public int getPlateLengths() {
@@ -32,7 +32,7 @@ public class FerroconcretePlate extends Materials{
 
     public int setPriceOfFeroconcretePlate(int priceOfFeroconcretePlate) {
 
-        this.priceOfFeroconcretePlate = 100;
+        this.priceOfFeroconcretePlate = (int) (100 * Math.random());
         return priceOfFeroconcretePlate;
     }
 

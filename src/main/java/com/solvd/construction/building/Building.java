@@ -10,15 +10,15 @@ import com.solvd.construction.materials.Materials;
 import com.solvd.construction.staff.Builder;
 import com.solvd.construction.suppliers.Suppliers;
 
-import java.io.BufferedReader;
+import java.awt.*;
 import java.io.IOException;
-import java.io.InputStreamReader;
+import java.security.SecureRandom;
 import java.time.LocalDate;
-import java.util.Objects;
-import java.util.logging.LogManager;
+import java.util.*;
+import java.util.function.Supplier;
 import java.util.logging.Logger;
 
-import static com.solvd.construction.buildingtypes.Buildings.getPriceOfBuilding;
+
 
 public class Building implements CartographicObject {
 
@@ -48,6 +48,13 @@ public class Building implements CartographicObject {
 
     }
     private static final Logger LOGGER = Logger.getLogger(String.valueOf(Building.class));
+
+    public Building() {
+
+    }
+
+    public Building(int budget) {
+    }
 
     public static int getPrice1() throws IOException, EBuildingsException {
         return calculationOfThePrice1(IndustrialBuildings.getPriceOfIndustrialBuilding(), Materials.getEndPriceOfMaterials(), Suppliers.getDeliveryPrice(), Builder.getSalary());
@@ -123,4 +130,5 @@ public class Building implements CartographicObject {
     public void displayCartographicObject() {
 
     }
+
 }

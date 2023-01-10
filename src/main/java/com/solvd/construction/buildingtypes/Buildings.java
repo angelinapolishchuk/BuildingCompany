@@ -7,15 +7,21 @@ import com.sun.tools.javac.Main;
 import java.io.IOException;
 import java.util.logging.Logger;
 
-public abstract class Buildings {
+public class Buildings {
     private static final Logger LOGGER = Logger.getLogger(String.valueOf(Buildings.class));
     private int maxNumberOfFloors;
     private int maxArea;
     private static int priceOfTheBuilding;
 
+    public Buildings() {
+        
+    }
     public Buildings(int maxNumberOfFloors, int maxArea) {
         this.maxNumberOfFloors = maxNumberOfFloors;
         this.maxArea = maxArea;
+    }
+
+    public Buildings(int budget) {
     }
 
     public static int selectBuildingPrice() throws EBuildingsException, IOException {
@@ -36,17 +42,17 @@ public abstract class Buildings {
                 break;
             }
         }
-        return getPriceOfBuilding();
+        return priceOfTheBuilding;
     }
 
     private static int getBuildingType() {
         return getBuildingType();
     }
 
-    private static void setPriceOfBuilding(int priceOfTheBuilding) {
+    private static void setPriceOfTheBuilding(int priceOfTheBuilding) {
     }
 
-    public static int getPriceOfBuilding() throws IOException, EBuildingsException {
+    public static int getPriceOfTheBuilding() throws IOException, EBuildingsException {
         return selectBuildingPrice();
     }
 
@@ -55,6 +61,13 @@ public abstract class Buildings {
         return setBuildingType();
     }
 
-}
+    @Override
+    public String toString() {
+        return " Buildings{" +
+                " maxNumberOfFloors=" + maxNumberOfFloors +
+                ", maxArea=" + maxArea +
+                '}';
+    }
+    }
 
 
