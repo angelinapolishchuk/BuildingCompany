@@ -1,11 +1,12 @@
 package com.solvd.construction.staff;
 
 import com.solvd.construction.building.Building;
+import com.solvd.construction.buildingcompany.ProjectsOfBuildingCompany;
+import com.solvd.construction.buildingtypes.Buildings;
 import com.solvd.construction.exceptions.EBuilderException;
 import com.solvd.construction.materials.Materials;
 
 import java.util.ArrayList;
-import java.util.Locale;
 import java.util.Optional;
 import java.util.function.Supplier;
 import java.util.logging.LogManager;
@@ -15,43 +16,27 @@ import java.util.stream.Stream;
 
 public class Builder extends Person{
     private static final Logger LOGGER = LogManager.getLogManager().getLogger(String.valueOf(Builder.class));
-        final private int experience;
+        private int experience;
 
         public Builder(String firstName, String lastName, int age, int experience) throws EBuilderException {
             super(firstName, lastName, age);
             this.experience = experience;
         }
 
-    Building AgriculturalBuilding = new Building(2000000);
-    Building CivilBuilding = new Building(500000);
-    Building IndustrialBuilding = new Building(1000000);
-    public ArrayList<Building> createListOfBuilding(){
-        ArrayList<Building> building = new ArrayList<>();
-        building.add(AgriculturalBuilding);
-        building.add(CivilBuilding);
-        building.add(IndustrialBuilding);
-        Optional<Building> any = building.stream().findAny();
-        LOGGER.info((Supplier<String>) any.get());
-        return building;
-    }
-
-    Materials Stone1 = new Materials(2000);
-    Materials Wood1 = new Materials(3000);
-    Materials FerroconcretePlate1 = new Materials(6000);
-    Materials Stone2 = new Materials(5000);
-    Materials Wood2 = new Materials(1000);
-    Materials FerroconcretePlate2 = new Materials(8000);
-    public ArrayList<Materials> createListOfMaterials(){
-        ArrayList<Materials> materials = new ArrayList<>();
-        materials.add(Stone1);
-        materials.add(Wood1);
-        materials.add(FerroconcretePlate1);
-        materials.add(Stone2);
-        materials.add(Wood2);
-        materials.add(FerroconcretePlate2);
-        Optional<Materials> any = materials.stream().findAny();
-        LOGGER.info((Supplier<String>) any.get());
-        return materials;
+    public static Building createBuilding(String buildingType, ProjectsOfBuildingCompany project1) {
+        int priceOfTheBuilding = Building.choiceOfTheBuildingPrice(buildingType);
+        int budget = project1.getBudget();
+        if (budget < priceOfTheBuilding) {
+            LOGGER.info("You need a credit. The sum of credit is " + (priceOfTheBuilding - budget));
+            int credit = priceOfTheBuilding - budget;
+            LOGGER.info("Amount of your credit is: " + credit);
+            project1.setCredit();
+        }
+        LOGGER.info("We can start the construction. Your rest sum is " + (budget - priceOfTheBuilding));
+        Buildings acceptedBuilding = new Buildings(25, 2000);
+        LOGGER.info(acceptedBuilding.toString());
+        project1.setBuilding();
+        return project1.getBuilding();
     }
 
     public int getExperience() {
@@ -111,4 +96,5 @@ public class Builder extends Person{
     public static int getSalary() {
         return calculationOfSalary(7, 750);
     }
+
 }

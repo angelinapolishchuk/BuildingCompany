@@ -51,7 +51,7 @@ public class FerroconcretePlate extends Materials{
         this.plateWidths = 1000;
     }
 
-    public static Set<FerroconcretePlate> createFerroconcretePlateList(){
+    public Set<FerroconcretePlate> createFerroconcretePlateList(){
         Set<FerroconcretePlate> ferroconcretePlates = new HashSet<>();
         FerroconcretePlate FerroconcretePlate1 = new FerroconcretePlate(5000, 1500, 900, 100);
         FerroconcretePlate FerroconcretePlate2 = new FerroconcretePlate(4000, 1000, 800,100);

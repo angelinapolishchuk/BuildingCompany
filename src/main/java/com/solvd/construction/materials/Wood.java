@@ -47,7 +47,7 @@ public class Wood extends Materials{
 
         this.amountOfWood = amountOfWood;
     }
-    public static List<Integer> createWoodList() {
+    public List<Integer> createWoodList() {
         List<Integer>
                 woods = new LinkedList<Integer>();
         Wood Wood1 = new Wood( "cedar", 500, 1000, 75);

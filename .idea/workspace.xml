@@ -11,19 +11,16 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/buildingcompany/ProjectsOfBuildingCompany.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/buildingcompany/ProjectsOfBuildingCompany.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/buildingtypes/Buildings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/buildingtypes/Buildings.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/materials/FerroconcretePlate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/materials/FerroconcretePlate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/materials/Materials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/materials/Materials.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/materials/Wood.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/materials/Wood.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/request/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/request/Request.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/staff/Builder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/staff/Builder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/staff/ConstructionEngineer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/staff/ConstructionEngineer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/staff/ConstructorTechnician.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/staff/ConstructorTechnician.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/staff/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/staff/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/suppliers/Suppliers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/suppliers/Suppliers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/building/Building.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/building/Building.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/buildingcompany/ProjectsOfBuildingCompany.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/buildingcompany/ProjectsOfBuildingCompany.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/buildingtypes/Buildings.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/buildingtypes/Buildings.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/materials/FerroconcretePlate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/materials/FerroconcretePlate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/materials/Materials.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/materials/Materials.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/staff/Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/staff/Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/staff/ConstructionEngineer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/staff/ConstructionEngineer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/staff/ConstructorTechnician.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/staff/ConstructorTechnician.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -253,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673348545922</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Merge remote-tracking branch 'origin/main'">
+      <created>1674041832240</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1674041832240</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">

@@ -2,20 +2,15 @@ package com.solvd.construction.buildingcompany;
 
 import com.solvd.construction.building.Building;
 import com.solvd.construction.buildingtypes.Buildings;
-import com.solvd.construction.exceptions.EBuildingsException;
 
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Scanner;
 import java.util.logging.Logger;
-
-
-import static com.solvd.construction.buildingtypes.Buildings.getPriceOfTheBuilding;
 
 public class ProjectsOfBuildingCompany {
     private int budget;
     private int credit;
     private Building building;
+
     private static final Logger LOGGER = Logger.getLogger(String.valueOf(ProjectsOfBuildingCompany.class));
 
     public ProjectsOfBuildingCompany() {
@@ -26,49 +21,31 @@ public class ProjectsOfBuildingCompany {
         this.building = building;
     }
 
+    public void setBudget(int budget) {
 
+        this.budget = budget;
+    }
+    public int getBudget() {
 
-    public static int selectBudget() throws IOException, EBuildingsException {
-        Scanner sc = new Scanner(System.in);
-        LOGGER.info("Enter your budget: ");
-        final String budget = sc.nextLine();
-        LOGGER.info("Your budget – " + budget);
-        return getBudget();
+        return budget;
     }
 
-    public static int getSelectBudget() throws IOException, EBuildingsException {
-        return getBudget();
+    public int setCredit() {
+        this.credit = credit;
+        return 0;
     }
 
-    public static int getCalculationTheCredit() {
-        return getCalculationOfTheCredit();
+    public int getCredit(){
+        return credit;
     }
 
-    public int calculationTheCredit() throws IOException, EBuildingsException {
-        if (getBudget() < getPriceOfTheBuilding()) {
-            LOGGER.info("You need a credit. The sum of credit is " + getCalculationOfTheCredit());
-        } else if (getBudget() > getPriceOfTheBuilding()) {
-            LOGGER.info("You don't need a credit and can build your building. Rest sum is " + getCalculationOfTheCredit());
-        }
-        return getCalculationOfTheCredit();
+    public Buildings setBuilding() {
+        this.building = building;
+        return null;
     }
 
-
-    private static int getCalculationOfTheCredit() {
-        return getPriceOfTheCredit();
-    }
-
-    private static int getPriceOfTheCredit() {
-        return getCalculationOfTheCredit();
-    }
-
-    public int calculationOfTheCredit() throws IOException, EBuildingsException {
-        int priceOfTheCredit = getPriceOfTheBuilding() - ProjectsOfBuildingCompany.getBudget();
-        return priceOfTheCredit;
-    }
-
-    private static int getBudget() throws IOException, EBuildingsException {
-        return selectBudget();
+    public Building getBuilding(){
+        return building;
     }
     Buildings Agricultural1 = new Buildings(20,1000);
     Buildings Civil1 = new Buildings(3,5000);
@@ -80,6 +57,7 @@ public class ProjectsOfBuildingCompany {
         buildings.add(Industrial1);
         return buildings.toString();
     }
+
     @Override
     public String toString() {
         return " ProjectsOfBuildingCompany{" +

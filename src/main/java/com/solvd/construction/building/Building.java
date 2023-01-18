@@ -1,8 +1,8 @@
 package com.solvd.construction.building;
 
 import com.solvd.construction.CartographicObject;
+import com.solvd.construction.buildingcompany.ProjectsOfBuildingCompany;
 import com.solvd.construction.buildingtypes.AgriculturalBuildings;
-import com.solvd.construction.buildingtypes.Buildings;
 import com.solvd.construction.buildingtypes.CivilBuildings;
 import com.solvd.construction.buildingtypes.IndustrialBuildings;
 import com.solvd.construction.exceptions.EBuildingsException;
@@ -10,12 +10,8 @@ import com.solvd.construction.materials.Materials;
 import com.solvd.construction.staff.Builder;
 import com.solvd.construction.suppliers.Suppliers;
 
-import java.awt.*;
 import java.io.IOException;
-import java.security.SecureRandom;
 import java.time.LocalDate;
-import java.util.*;
-import java.util.function.Supplier;
 import java.util.logging.Logger;
 
 
@@ -32,8 +28,8 @@ public class Building implements CartographicObject {
 
     private Builder salary;
     private String nameOfBuilding = "summer";
-    private static int priceOfTheBuilding;
 
+// todo лист зданий и тут тоже создаём кладём в лист и сетаем и объект в проджект оф билдинг
 
     public Building (AgriculturalBuildings priceOfAgriculturalBuilding, CivilBuildings priceOfCivilBuilding, IndustrialBuildings priceOfIndustrialBuilding, Materials endPriceOfMaterials, LocalDate startDate, LocalDate endDate,Suppliers deliveryPrice, Builder salary,String nameOfBuilding) {
         this.priceOfIndustrialBuilding = priceOfIndustrialBuilding;
@@ -56,32 +52,28 @@ public class Building implements CartographicObject {
     public Building(int budget) {
     }
 
-    public static int getPrice1() throws IOException, EBuildingsException {
-        return calculationOfThePrice1(IndustrialBuildings.getPriceOfIndustrialBuilding(), Materials.getEndPriceOfMaterials(), Suppliers.getDeliveryPrice(), Builder.getSalary());
+    public static int choiceOfTheBuildingPrice(String buildingType) {
+        int priceOfTheBuilding=0;
+        switch (buildingType) {
+            case "agricultural" -> {
+                priceOfTheBuilding = Builder.getSalary() + Materials.getEndPriceOfMaterials() + AgriculturalBuildings.getPriceOfAgriculturalBuilding() + Suppliers.getDeliveryPrice();;
+                LOGGER.info("The price of your building is " + priceOfTheBuilding);
+                break;
+            }
+            case "civil" -> {
+                priceOfTheBuilding = Builder.getSalary() + Materials.getEndPriceOfMaterials() + CivilBuildings.getPriceOfCivilBuilding() + Suppliers.getDeliveryPrice();;
+                LOGGER.info("The price of your building is " + priceOfTheBuilding);
+                break;
+            }
+            case "industrial" -> {
+                priceOfTheBuilding = Builder.getSalary() + Materials.getEndPriceOfMaterials() + IndustrialBuildings.getPriceOfIndustrialBuilding() + Suppliers.getDeliveryPrice();
+                LOGGER.info("The price of your building is " + priceOfTheBuilding);
+                break;
+            }
+        }
+        return priceOfTheBuilding;
     }
 
-    public static int calculationOfThePrice1(int priceOfIndustrialBuilding, int endPriceOfMaterials, int deliveryPrice, int salary) throws IOException, EBuildingsException {
-    int price1 = Builder.getSalary() + Materials.getEndPriceOfMaterials() + IndustrialBuildings.getPriceOfIndustrialBuilding() + Suppliers.getDeliveryPrice();
-        return price1;
-    }
-
-    public static int getPrice2() throws IOException, EBuildingsException {
-        return calculationOfThePrice2(CivilBuildings.getPriceOfCivilBuilding(), Materials.getEndPriceOfMaterials(), Suppliers.getDeliveryPrice(), Builder.getSalary());
-    }
-
-    public static int calculationOfThePrice2(int priceOfCivilBuilding, int endPriceOfMaterials, int deliveryPrice, int salary) throws IOException, EBuildingsException {
-        int price2 = Builder.getSalary() + Materials.getEndPriceOfMaterials() + CivilBuildings.getPriceOfCivilBuilding() + Suppliers.getDeliveryPrice();
-        return price2;
-    }
-
-    public static int getPrice3() throws IOException, EBuildingsException {
-        return calculationOfThePrice3(AgriculturalBuildings.getPriceOfAgriculturalBuilding(), Materials.getEndPriceOfMaterials(), Suppliers.getDeliveryPrice(), Builder.getSalary());
-    }
-
-    public static int calculationOfThePrice3(int priceOfAgriculturalBuilding, int endPriceOfMaterials, int deliveryPrice, int salary) throws IOException, EBuildingsException {
-        int price3 = Builder.getSalary() + Materials.getEndPriceOfMaterials() + AgriculturalBuildings.getPriceOfAgriculturalBuilding() + Suppliers.getDeliveryPrice();
-        return price3;
-    }
 
     public static LocalDate calculationOfTheEndDate() {
         LocalDate startDate = LocalDate.now();

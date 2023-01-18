@@ -51,7 +51,10 @@ public class Suppliers {
 
         return 1000;
     }
+    public void setDeliveryPrice(int deliveryPrice) {
 
+        this.deliveryPrice= deliveryPrice;
+    }
     public void setWeightOfDelivery(int weightOfDelivery) {
 
         this.weightOfDelivery = 1000;
