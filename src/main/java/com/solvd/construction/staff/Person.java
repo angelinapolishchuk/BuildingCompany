@@ -1,9 +1,8 @@
 package com.solvd.construction.staff;
 
 
-import com.solvd.construction.exceptions.EAgeException;
-import com.solvd.construction.exceptions.EFirstNameException;
-import com.solvd.construction.exceptions.ELastNameException;
+import com.solvd.construction.exceptions.EFirstNameIsNuLLException;
+import com.solvd.construction.exceptions.ELastNameIsNullException;
 
 import java.util.Scanner;
 import java.util.logging.Logger;
@@ -15,6 +14,9 @@ public class Person {
     private static final Logger LOGGER = Logger.getLogger(String.valueOf(Person.class));
 
     public Person(String firstName, String lastName, int age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
     }
 
     public String enterFirstName() {
@@ -22,8 +24,8 @@ public class Person {
             Scanner scanner = new Scanner(System.in);
             String firstName = scanner.nextLine();
             if (firstName == null) ;
-            throw new EFirstNameException("Enter the last name correctly! ");
-        } catch (EFirstNameException e) {
+            throw new EFirstNameIsNuLLException("Enter the last name correctly! ");
+        } catch (EFirstNameIsNuLLException e) {
             LOGGER.info(e.getMessage());
         } finally {
             try {
@@ -41,8 +43,8 @@ public class Person {
             Scanner scanner = new Scanner(System.in);
             String lastName = scanner.nextLine();
             if (lastName == null) ;
-            throw new ELastNameException("Enter the last name once again: ");
-        } catch (ELastNameException e) {
+            throw new ELastNameIsNullException("Enter the last name once again: ");
+        } catch (ELastNameIsNullException e) {
             LOGGER.info(e.getMessage());
         } finally {
             try {
@@ -55,25 +57,6 @@ public class Person {
         }
     }
 
-    public int enterAge() {
-        try {
-            Scanner scanner = new Scanner(System.in);
-            int age = scanner.nextInt();
-            if (age == 0) ;
-            throw new EAgeException("Enter the age once again: ");
-        } catch (EAgeException e) {
-            LOGGER.info(e.getMessage());
-        } finally {
-            try {
-                Scanner scanner = new Scanner(System.in);
-                String age = scanner.nextLine();
-                LOGGER.info("Age " + age);
-            } finally {
-                return age;
-            }
-        }
-    }
-
     public int getAge() {
         return age;
     }
@@ -82,21 +65,19 @@ public class Person {
         return firstName;
     }
 
-    public int setAge() {
+    public void setAge(int age) {
         this.age = age;
-        return age;
     }
 
-    public String setFirstName() {
+    public void setFirstName(String firstName) {
         this.firstName = firstName;
-        return firstName;
-    }
-    public String setLastName() {
-        this.lastName = lastName;
-        return lastName;
     }
 
-    public String getLastName(){
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getLastName() {
         return lastName;
     }
 }

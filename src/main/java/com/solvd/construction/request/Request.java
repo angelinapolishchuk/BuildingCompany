@@ -1,17 +1,13 @@
 package com.solvd.construction.request;
 
-import com.solvd.construction.buildingtypes.CivilBuildings;
-import com.solvd.construction.staff.Builder;
-
 import java.util.PriorityQueue;
 import java.util.Queue;
-import java.util.Scanner;
-import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
 public class Request {
     private static final Logger LOGGER = Logger.getLogger(String.valueOf(Request.class));
     private int amountOfTheRequest;
+
     public int getAmountOfTheRequest() {
 
         return amountOfTheRequest;
@@ -21,10 +17,12 @@ public class Request {
 
         this.amountOfTheRequest = amountOfTheRequest;
     }
-    public Request (int amountOfTheRequest) {
+
+    public Request(int amountOfTheRequest) {
 
         this.amountOfTheRequest = amountOfTheRequest;
     }
+
     public Queue<Request> createQueueList() {
         Queue<Request> requests = new PriorityQueue<>();
         Request Request1 = new Request(120000);
@@ -36,10 +34,13 @@ public class Request {
         return requests;
 
     }
-    {double calculationOfAllAmounts = createQueueList().stream()
-            .mapToInt(Request::getAmountOfTheRequest)
-            .summaryStatistics()
-            .getSum();
-    LOGGER.info("Sum of all amounts: " + calculationOfAllAmounts);}
+
+    {
+        double calculationOfAllAmounts = createQueueList().stream()
+                .mapToInt(Request::getAmountOfTheRequest)
+                .summaryStatistics()
+                .getSum();
+        LOGGER.info("Sum of all amounts: " + calculationOfAllAmounts);
+    }
 
 }

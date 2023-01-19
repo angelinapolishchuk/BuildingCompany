@@ -4,7 +4,6 @@ import java.util.logging.Logger;
 
 public class MyLinkedList {
     private LinkedListElement head;
-
     private static final Logger LOGGER = Logger.getLogger(String.valueOf(MyLinkedList.class));
 
     public MyLinkedList() {

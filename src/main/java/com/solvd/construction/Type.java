@@ -1,6 +1,5 @@
 package com.solvd.construction;
 
-import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
 public enum Type {
@@ -12,13 +11,14 @@ public enum Type {
     String layout;
     private static final Logger LOGGER = Logger.getLogger(String.valueOf(Type.class));
 
-    Type(String layout){
+    Type(String layout) {
         this.layout = layout;
     }
-    boolean hasLayout() {
 
+    boolean hasLayout() {
         return layout != null;
     }
+
     public void main(String[] args) {
         for (Type type : Type.values()) {
             if (type.hasLayout()) {

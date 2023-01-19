@@ -1,100 +1,25 @@
 package com.solvd.construction.staff;
 
-import com.solvd.construction.building.Building;
-import com.solvd.construction.buildingcompany.ProjectsOfBuildingCompany;
-import com.solvd.construction.buildingtypes.Buildings;
-import com.solvd.construction.exceptions.EBuilderException;
-import com.solvd.construction.materials.Materials;
+public class Builder extends Person {
+    private int salary;
 
-import java.util.ArrayList;
-import java.util.Optional;
-import java.util.function.Supplier;
-import java.util.logging.LogManager;
-import java.util.logging.Logger;
-import java.util.stream.Stream;
-
-
-public class Builder extends Person{
-    private static final Logger LOGGER = LogManager.getLogManager().getLogger(String.valueOf(Builder.class));
-        private int experience;
-
-        public Builder(String firstName, String lastName, int age, int experience) throws EBuilderException {
-            super(firstName, lastName, age);
-            this.experience = experience;
-        }
-
-    public static Building createBuilding(String buildingType, ProjectsOfBuildingCompany project1) {
-        int priceOfTheBuilding = Building.choiceOfTheBuildingPrice(buildingType);
-        int budget = project1.getBudget();
-        if (budget < priceOfTheBuilding) {
-            LOGGER.info("You need a credit. The sum of credit is " + (priceOfTheBuilding - budget));
-            int credit = priceOfTheBuilding - budget;
-            LOGGER.info("Amount of your credit is: " + credit);
-            project1.setCredit();
-        }
-        LOGGER.info("We can start the construction. Your rest sum is " + (budget - priceOfTheBuilding));
-        Buildings acceptedBuilding = new Buildings(25, 2000);
-        LOGGER.info(acceptedBuilding.toString());
-        project1.setBuilding();
-        return project1.getBuilding();
+    public Builder(String firstName, String lastName, int age, int salary) {
+        super(firstName, lastName, age);
+        this.salary = salary;
     }
 
-    public int getExperience() {
-            return experience;
-        }
-
-        public int setExperience(int experience) throws EBuilderException {
-            return experience;
-        }
-    public ArrayList<Builder> createListOfBuilders() throws EBuilderException {
-        ArrayList<Builder> builders = new ArrayList<>();
-        builders.add(new Builder("Павел", "Петриков", 22, setExperience(4)));
-        builders.add(new Builder("Самвел", "Петриков", 25, setExperience(7)));
-        builders.add(new Builder("Пётр", "Сидоров", 32, setExperience(12)));
-        builders.forEach(builder -> {
-            try {
-                setExperience(getExperience() + 1);
-            } catch (EBuilderException e) {
-                throw new RuntimeException(e);
-            }
-        });
-
-        for (int i = 0; i < builders.size(); i++)
-            if (builders.get(i).getExperience() > builders.get(i + 1).getExperience())
-                for (i = 0; i < builders.size(); i++)
-                    LOGGER.info(builders.get(i).toString() + "\n");
-        return builders;
+    public void setSalary(int salary) {
+        this.salary = salary;
     }
 
-    Stream<Builder> chooseOfBuilders = createListOfBuilders().stream()
-            .filter(c -> c.getExperience() > 1)
-            .filter(c-> c.enterAge() > 18);
-
-    double averageAge = createListOfBuilders().stream()
-            .mapToInt(Builder::getAge)
-            .summaryStatistics()
-            .getAverage();
-
-    {int maxFirstNameLength = createListOfBuilders().stream()
-            .mapToInt((value) -> {
-                return value.getFirstName().length();
-            })
-            .summaryStatistics()
-            .getMax();
-    LOGGER.info(" MaxFirstNameLength: " + maxFirstNameLength);}
-
-
-    public static int calculationOfSalary(int experience, int salary){
-        if (experience < 5) {
-            salary = 500;
-        } else if (experience > 5 && experience < 10) {
-            salary = 750;
-        } else if (experience > 10) {
-            salary = 1000;}
+    public int getSalary() {
         return salary;
     }
-    public static int getSalary() {
-        return calculationOfSalary(7, 750);
-    }
 
+    @Override
+    public String toString() {
+        return " Builder{" +
+                ", salary =" + salary +
+                '}';
+    }
 }

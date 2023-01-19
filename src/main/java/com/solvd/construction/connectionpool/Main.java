@@ -8,7 +8,6 @@ import java.util.logging.Logger;
 public class Main {
     private static final Logger LOGGER = Logger.getLogger(String.valueOf(Main.class));
 
-
     public void main(String[] args) {
         ExecutorService executor = Executors.newFixedThreadPool(7);
         for (int i = 0; i < 10; i++) {

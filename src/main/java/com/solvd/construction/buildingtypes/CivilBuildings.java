@@ -1,13 +1,11 @@
 package com.solvd.construction.buildingtypes;
 
-import com.solvd.construction.Type;
-
-public class CivilBuildings extends Buildings{
+public class CivilBuildings extends Buildings {
     private int numberOfApartments;
     private int priceOfOneApartment;
 
-    public CivilBuildings( int maxNumbersOfFloors, int maxArea, int numberOfApartments, int priceOfOneApartment) {
-        super (maxNumbersOfFloors, maxArea);
+    public CivilBuildings(int maxNumbersOfFloors, int maxArea, int numberOfApartments, int priceOfOneApartment) {
+        super(maxNumbersOfFloors, maxArea);
         this.numberOfApartments = numberOfApartments;
         this.priceOfOneApartment = priceOfOneApartment;
 
@@ -29,11 +27,21 @@ public class CivilBuildings extends Buildings{
         this.numberOfApartments = 30000;
     }
 
-    public static int calculationOfCivilBuildingsPrice(int numberOfApartments, int priceOfOneApartment){
+    public static int calculationOfCivilBuildingsPrice(int numberOfApartments, int priceOfOneApartment) {
         int priceOfCivilBuilding = numberOfApartments * priceOfOneApartment;
         return priceOfCivilBuilding;
     }
+
     public static int getPriceOfCivilBuilding() {
         return calculationOfCivilBuildingsPrice(235, 30000);
     }
+
+    @Override
+    public String toString() {
+        return " CivilBuildings{" +
+                ", numberOfApartments =" + numberOfApartments +
+                ", priceOfOneApartment =" + priceOfOneApartment +
+                '}';
+    }
 }
+

@@ -1,20 +1,26 @@
 package com.solvd.construction.materials;
 
+
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
+import java.util.logging.Logger;
 
 
 public class Materials {
 
     private static int endPriceOfMaterials;
 
+    private static final Logger LOGGER = Logger.getLogger(String.valueOf(Materials.class));
+
     public Materials(int endPriceOfMaterials) {
         this.endPriceOfMaterials = endPriceOfMaterials;
     }
 
-    public static int getEndPriceOfMaterials() {
+    public int getEndPriceOfMaterials() {
 
-        return calculationOfTheEndPriceOfMaterials(75, 100, 50);
+        return endPriceOfMaterials;
     }
 
     public void setEndPriceOfMaterials(int endPriceOfMaterials) {
@@ -22,6 +28,13 @@ public class Materials {
         this.endPriceOfMaterials = endPriceOfMaterials;
     }
 
+    Map<String, Integer> materialsAndSuppliers = new HashMap<>(){
+        {
+            materialsAndSuppliers.put("Stone", 374);
+            materialsAndSuppliers.put("Wood", 463);
+            materialsAndSuppliers.put("FerroconcretePlate", 544);
+            LOGGER.info("Map materialsAndSuppliers" + materialsAndSuppliers);
+        }};
 
     public static Set<Materials> createMaterialsList() {
         Set<Materials> materials = new HashSet<>();
@@ -33,10 +46,4 @@ public class Materials {
         materials.add(Wood);
         return materials;
     }
-
-    public static int calculationOfTheEndPriceOfMaterials(int priceOfWood, int priceOfFerroconcretePlate, int priceOfStone) {
-        endPriceOfMaterials = (int) (FerroconcretePlate.getPriceOfFerroconcretePlate() + Stone.getPriceOfStone() + Wood.getPriceOfWood() + Math.random());
-        return endPriceOfMaterials;
-    }
-
 }

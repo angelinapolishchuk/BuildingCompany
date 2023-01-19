@@ -1,15 +1,8 @@
 package com.solvd.construction.suppliers;
 
-import com.solvd.construction.building.Building;
-import com.solvd.construction.materials.Materials;
-import com.solvd.construction.staff.Builder;
-
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.Objects;
 import java.util.logging.Logger;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class Suppliers {
     private int weightOfDelivery;
@@ -21,9 +14,7 @@ public class Suppliers {
         this.weightOfDelivery = weightOfDelivery;
         this.deliveryPrice = deliveryPrice;
         this.isDelivered = isDelivered;
-
     }
-
 
     public static ArrayList<Suppliers> createListOfSuppliers() {
         ArrayList<Suppliers> suppliers = new ArrayList<>();
@@ -32,18 +23,20 @@ public class Suppliers {
         suppliers.add(new Suppliers(1100, 247500, true));
         return suppliers;
     }
-    private boolean isDeliveredIsTrue;{
-    boolean isDeliveredIsTrue = createListOfSuppliers().stream()
-            .allMatch(suppliers -> suppliers.getIsDelivered() == true);
-     LOGGER.info("Is delivered" + isDeliveredIsTrue);}
 
-
-    public static int getDeliveryPrice() {
-        return calculationOfTheDeliveryPrice(getWeightOfDelivery(),Materials.getEndPriceOfMaterials() );
+    private boolean isDeliveredIsTrue;
+    {
+        boolean isDeliveredIsTrue = createListOfSuppliers().stream()
+                .allMatch(suppliers -> suppliers.getIsDelivered() == true);
+        LOGGER.info("Is delivered" + isDeliveredIsTrue);
     }
 
-    public static int calculationOfTheDeliveryPrice(int endPriceOfMaterials, int weightOfDelivery) {
-        deliveryPrice = getWeightOfDelivery() * Materials.getEndPriceOfMaterials();
+    public static int getDeliveryPrice() {
+        return calculationOfTheDeliveryPrice();
+    }
+
+    public static int calculationOfTheDeliveryPrice() {
+        deliveryPrice = (int) (getWeightOfDelivery() * Math.random());
         return deliveryPrice;
     }
 
@@ -51,14 +44,17 @@ public class Suppliers {
 
         return 1000;
     }
+
     public void setDeliveryPrice(int deliveryPrice) {
 
-        this.deliveryPrice= deliveryPrice;
+        this.deliveryPrice = deliveryPrice;
     }
+
     public void setWeightOfDelivery(int weightOfDelivery) {
 
         this.weightOfDelivery = 1000;
     }
+
     public boolean getIsDelivered() {
 
         return isDelivered;
@@ -68,10 +64,13 @@ public class Suppliers {
 
         this.isDelivered = isDelivered;
     }
+
     @Override
     public String toString() {
         return "Suppliers{" +
                 ", weightOfDelivery=" + weightOfDelivery +
+                ", deliveryPrice=" + deliveryPrice +
+                ", isDelivered=" + isDelivered +
                 '}';
     }
 
@@ -79,7 +78,6 @@ public class Suppliers {
     public int hashCode() {
         return Objects.hash(weightOfDelivery);
     }
-
 
     @Override
     public boolean equals(Object o) {
