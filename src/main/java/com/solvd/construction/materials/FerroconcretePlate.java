@@ -54,5 +54,9 @@ public class FerroconcretePlate extends Materials {
         LOGGER.info("AveragePlateLengths: " + averagePlateLengths);
     }
 
+    @Override
+    public int calculationOfTheEndPriceOfMaterials() {
+        return 0;
+    }
 }
 

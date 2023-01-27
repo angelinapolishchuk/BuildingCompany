@@ -1,5 +1,7 @@
 package com.solvd.construction.reflection;
 
+import com.solvd.construction.building.Building;
+
 import java.lang.reflect.*;
 import java.util.Arrays;
 
@@ -29,13 +31,23 @@ public class Reflection {
             }
         }
 
-        Field nameOfBuilding = building.getClass().getDeclaredField("nameOfBuilding");
+        try {
+            boolean b1 = building.isInstance(new Building());
+            LOGGER.info(b1 + "\n");
+            boolean b2 = building.isInstance(new Building());
+            LOGGER.info(b1 + "\n");
+        }
+        catch (Throwable e) {
+            LOGGER.info(String.valueOf(e));
+        }
+
+        Field nameOfBuilding = Class.class.getDeclaredField("SUMMER");
         nameOfBuilding.setAccessible(true);
         LOGGER.info("Old value: " + nameOfBuilding.get(nameOfBuilding));
-        nameOfBuilding.set(building, "Megapolis");
+        nameOfBuilding.set(building, "WINTER");
         LOGGER.info("New value: " + nameOfBuilding.get(nameOfBuilding) + "\n");
 
-        Method[] methods = building.getClass().getDeclaredMethods();
+        Method[] methods = Class.class.getDeclaredMethods();
         Arrays.stream(methods).forEach(method ->
                 LOGGER.info("\n Return type: " + method.getReturnType()
                         + "\n Modifiers: " + Modifier.toString(method.getModifiers())
@@ -43,9 +55,9 @@ public class Reflection {
                         + "\n Input parameters: " + Arrays.toString(method.getParameters()) + "\n")
         );
 
-        Method method = building.getClass().getDeclaredMethod("getBuildingOptions");
+        Method method = Class.class.getDeclaredMethod("getBuildingOptions");
         LOGGER.info(method.invoke(building).toString());
-        Method method1 = building.getClass().getDeclaredMethod("Type", Type.class);
+        Method method1 = Class.class.getDeclaredMethod("Type", Type.class);
         LOGGER.info(method1.invoke(building, Type.class).toString());
     }
 }

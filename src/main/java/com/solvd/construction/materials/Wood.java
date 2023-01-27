@@ -71,5 +71,9 @@ public class Wood extends Materials {
     }
 
 
+    @Override
+    public int calculationOfTheEndPriceOfMaterials() {
+        return 0;
+    }
 }
 

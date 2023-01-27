@@ -11,7 +11,7 @@ public class AgriculturalBuildings extends Buildings {
     }
 
     public static int getNumberOfCompartments() {
-        return 17;
+        return 171;
     }
 
     public static int getPriceOfAgriculturalBuilding() {
@@ -23,12 +23,12 @@ public class AgriculturalBuildings extends Buildings {
     }
 
     public static int getPriceOfOneCompartment() {
-        return 1000;
+        return 10000;
     }
 
     public void setPriceOfOneCompartment(int priceOfOneCompartment) {
 
-        this.priceOfOneCompartment = 1000;
+        this.priceOfOneCompartment = 10000;
     }
 
     public static int calculationOfAgriculturalBuildingsPrice(int numberOfCompartments, int priceOfOneCompartment) {

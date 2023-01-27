@@ -1,12 +1,6 @@
 package com.solvd.construction.buildingcompany;
 
 import com.solvd.construction.building.Building;
-import com.solvd.construction.buildingtypes.Buildings;
-
-import java.util.ArrayList;
-
-import java.util.List;
-
 
 public class ProjectsOfBuildingCompany {
     private int budget;
@@ -46,18 +40,6 @@ public class ProjectsOfBuildingCompany {
 
     public Building getBuilding() {
         return building;
-    }
-
-    Buildings Agricultural1 = new Buildings(20, 1000);
-    Buildings Civil1 = new Buildings(3, 5000);
-    Buildings Industrial1 = new Buildings(1, 100);
-
-    public List<Buildings> createListOfBuildings() {
-        ArrayList<Buildings> buildings = new ArrayList<>();
-        buildings.add(Agricultural1);
-        buildings.add(Civil1);
-        buildings.add(Industrial1);
-        return buildings;
     }
 
     @Override

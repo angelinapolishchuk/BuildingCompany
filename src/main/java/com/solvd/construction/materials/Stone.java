@@ -1,21 +1,20 @@
 package com.solvd.construction.materials;
 
-public class Stone extends Materials {
+public final class Stone extends Materials {
 
-    private int priceOfStone;
+    private final int priceOfStone = 200;
 
-    public Stone(int endPriceOfMaterials, int priceOfStone) {
+    public Stone(int endPriceOfMaterials) {
         super(endPriceOfMaterials);
-        this.priceOfStone = priceOfStone;
-    }
-
-    public void setPriceOfStone(int priceOfStone) {
-
-        this.priceOfStone = priceOfStone;
     }
 
     public int getPriceOfStone() {
 
         return priceOfStone;
+    }
+
+    @Override
+    public int calculationOfTheEndPriceOfMaterials() {
+        return 0;
     }
 }

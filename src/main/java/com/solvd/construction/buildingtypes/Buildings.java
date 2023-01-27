@@ -1,6 +1,5 @@
 package com.solvd.construction.buildingtypes;
 
-
 public class Buildings {
     private int maxNumberOfFloors;
     private int maxArea;

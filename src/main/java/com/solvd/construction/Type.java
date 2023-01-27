@@ -6,7 +6,7 @@ public enum Type {
 
     CIVIL("centric"),
     AGRICULTURAL("corridor"),
-    INDUSTRIAL("sectional"), CIVIl("centric");
+    INDUSTRIAL("sectional");
 
     String layout;
     private static final Logger LOGGER = Logger.getLogger(String.valueOf(Type.class));

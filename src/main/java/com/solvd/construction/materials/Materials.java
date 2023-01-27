@@ -1,14 +1,11 @@
 package com.solvd.construction.materials;
 
-
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
-import java.util.Set;
 import java.util.logging.Logger;
 
 
-public class Materials {
+public abstract class Materials {
 
     private static int endPriceOfMaterials;
 
@@ -28,6 +25,8 @@ public class Materials {
         this.endPriceOfMaterials = endPriceOfMaterials;
     }
 
+    public abstract int calculationOfTheEndPriceOfMaterials();
+
     Map<String, Integer> materialsAndSuppliers = new HashMap<>(){
         {
             materialsAndSuppliers.put("Stone", 374);
@@ -36,14 +35,4 @@ public class Materials {
             LOGGER.info("Map materialsAndSuppliers" + materialsAndSuppliers);
         }};
 
-    public static Set<Materials> createMaterialsList() {
-        Set<Materials> materials = new HashSet<>();
-        Materials FerroconcretePlate = new Materials(100);
-        Materials Stone = new Materials(50);
-        Materials Wood = new Materials(75);
-        materials.add(FerroconcretePlate);
-        materials.add(Stone);
-        materials.add(Wood);
-        return materials;
-    }
 }
