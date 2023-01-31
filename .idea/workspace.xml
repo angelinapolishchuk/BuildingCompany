@@ -5,45 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="474ea609-7490-4d12-95c9-922260cc54c0" name="Changes" comment="Merge remote-tracking branch 'origin/main'">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/connectionpool/DeadLock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/reflection2/Reflection2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/exceptions/ECreditSizeException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/exceptions/EInvalidBuildersSalary.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/DataBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/DataBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/Type.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/Type.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/building/Acceptance.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/building/Building.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/building/Building.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/buildingcompany/ProjectsOfBuildingCompany.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/buildingcompany/ProjectsOfBuildingCompany.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/buildingtypes/AgriculturalBuildings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/buildingtypes/AgriculturalBuildings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/buildingtypes/Buildings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/buildingtypes/Buildings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/materials/FerroconcretePlate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/materials/FerroconcretePlate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/materials/Materials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/materials/Materials.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/materials/Stone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/materials/Stone.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/materials/Wood.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/materials/Wood.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/newconstruction/ConstructionOne.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/reflection/Reflection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/reflection/Reflection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/request/Request.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/suppliers/Suppliers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/suppliers/Suppliers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/exceptions/EFirstNameIsNuLLException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/exceptions/ELastNameIsNullException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/staff/Builder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/staff/Builder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/staff/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/staff/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/DataBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/DataBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/Type.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/Type.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/building/Acceptance.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/building/Building$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/building/Building$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/building/Building.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/building/Building.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/buildingcompany/ProjectsOfBuildingCompany.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/buildingcompany/ProjectsOfBuildingCompany.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/buildingtypes/AgriculturalBuildings.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/buildingtypes/AgriculturalBuildings.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/buildingtypes/Buildings.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/buildingtypes/Buildings.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/materials/FerroconcretePlate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/materials/FerroconcretePlate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/materials/Materials$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/materials/Materials$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/materials/Materials.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/materials/Materials.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/materials/Stone.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/materials/Stone.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/materials/Wood.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/materials/Wood.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/newconstruction/ConstructionOne$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/newconstruction/ConstructionOne$Building$Type.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/newconstruction/ConstructionOne$Building.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/newconstruction/ConstructionOne.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/reflection/Reflection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/reflection/Reflection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/request/Request.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/suppliers/Suppliers.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/suppliers/Suppliers.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/staff/Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/staff/Builder.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -314,7 +290,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674823199004</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Merge remote-tracking branch 'origin/main'">
+      <created>1675193968026</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1675193968026</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">

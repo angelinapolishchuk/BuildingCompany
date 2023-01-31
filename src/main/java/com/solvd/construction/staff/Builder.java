@@ -1,5 +1,6 @@
 package com.solvd.construction.staff;
 
+
 public class Builder extends Person {
     private int salary;
 

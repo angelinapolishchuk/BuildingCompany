@@ -3,6 +3,8 @@ package com.solvd.construction;
 import com.solvd.construction.building.Building;
 import com.solvd.construction.buildingcompany.ProjectsOfBuildingCompany;
 import com.solvd.construction.buildingtypes.Buildings;
+import com.solvd.construction.exceptions.EBudgetSizeException;
+import com.solvd.construction.exceptions.ECreditSizeException;
 import com.solvd.construction.staff.Builder;
 import com.solvd.construction.suppliers.Suppliers;
 
@@ -20,8 +22,26 @@ public final class DataBuilder {
         int priceOfTheBuilding = Building.choiceOfTheBuildingPrice(buildingType, project1.getBuilding().getBuilders(), project1.getBuilding().getSuppliers());
         LOGGER.info("The price of your building is " + priceOfTheBuilding);
         int budget = project1.getBudget();
+        try {
+            if (budget < 500000) {
+                LOGGER.info("You can't construct your building. The sum of your budget is too small. See you soon!");
+                System.exit(0);
+                throw new EBudgetSizeException("You can't construct your building. The sum of your budget is too small.");
+            }
+        } catch (EBudgetSizeException e) {
+            throw new RuntimeException(e);
+        }
         if (budget < priceOfTheBuilding) {
             int credit = (priceOfTheBuilding - budget);
+            try {
+                if (credit > 1000000) {
+                    LOGGER.info("You can't take a credit and construct your building. The sum is too big. See you soon!");
+                    System.exit(0);
+                    throw new ECreditSizeException("You can't take a credit. The sum is to big.");
+                }
+            } catch (ECreditSizeException e) {
+                throw new RuntimeException(e);
+            }
             LOGGER.info("You have taken out a credit for the amount of:  " + credit);
             project1.setCredit(credit);
         }
@@ -80,7 +100,6 @@ public final class DataBuilder {
         builders.add(new Builder("Самвел", "Петриков", 25, 1200));
         builders.add(new Builder("Пётр", "Сидоров", 32, 1300));
         return builders;
-
     }
 
     public static double averageAgeOfTheBuilders(){

@@ -6,6 +6,7 @@ import com.solvd.construction.buildingtypes.AgriculturalBuildings;
 import com.solvd.construction.buildingtypes.Buildings;
 import com.solvd.construction.buildingtypes.CivilBuildings;
 import com.solvd.construction.buildingtypes.IndustrialBuildings;
+import com.solvd.construction.exceptions.EInvalidBuildersSalary;
 import com.solvd.construction.staff.Builder;
 import com.solvd.construction.suppliers.Suppliers;
 
@@ -13,6 +14,7 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.logging.Logger;
 
 
 public class Building implements CartographicObject {
@@ -27,6 +29,7 @@ public class Building implements CartographicObject {
     private String nameOfBuilding;
     private int credit;
     private String buildingType;
+    private static final Logger LOGGER = Logger.getLogger(String.valueOf(Building.class));
 
     public Building(LocalDate startDate, LocalDate endDate, List<Builder> builders, String nameOfBuilding, Set<Buildings> buildings, int credit, String buildingType, List<Suppliers> suppliers, Map<String, Integer> materialsAndSuppliers) {
         this.startDate = startDate;
@@ -44,13 +47,27 @@ public class Building implements CartographicObject {
 
     }
 
-    public static int choiceOfTheBuildingPrice(Type buildingType, List<Builder> builder, List<Suppliers> suppliers){
+    public static int choiceOfTheBuildingPrice(Type buildingType, List<Builder> builder, List<Suppliers> suppliers) {
         int sumOfBuildersSalary = builder.stream().map(Builder::getSalary).filter(a -> a > 900).mapToInt(a -> a).sum();
         int sumOfTheSuppliersDeliveryPrice = suppliers.stream().map(Suppliers::getDeliveryPrice).filter(a -> a < 10000).mapToInt(a -> a).sum();
+        try {
+            if (sumOfBuildersSalary < 3000) {
+                throw new EInvalidBuildersSalary("Error");
+            }
+        } catch (EInvalidBuildersSalary e) {
+            throw new RuntimeException(e);
+        }
+        finally {
+            sumOfBuildersSalary = builder.stream().map(Builder::getSalary).filter(a -> a > 900).mapToInt(a -> a).sum();
+            if (sumOfBuildersSalary < 3000){
+                sumOfBuildersSalary = 3000 ;
+            }
+        }
         int priceOfTheBuilding = switch (buildingType) {
             case AGRICULTURAL -> sumOfBuildersSalary + AgriculturalBuildings.getPriceOfAgriculturalBuilding() + sumOfTheSuppliersDeliveryPrice;
             case CIVIL -> sumOfBuildersSalary + CivilBuildings.getPriceOfCivilBuilding() + sumOfTheSuppliersDeliveryPrice;
-            case INDUSTRIAL -> sumOfBuildersSalary + IndustrialBuildings.getPriceOfIndustrialBuilding() + sumOfTheSuppliersDeliveryPrice;};
+            case INDUSTRIAL -> sumOfBuildersSalary + IndustrialBuildings.getPriceOfIndustrialBuilding() + sumOfTheSuppliersDeliveryPrice;
+        };
         return priceOfTheBuilding;
     }
 
