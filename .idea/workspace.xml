@@ -5,21 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="474ea609-7490-4d12-95c9-922260cc54c0" name="Changes" comment="Merge remote-tracking branch 'origin/main'">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/exceptions/ECreditSizeException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/exceptions/EInvalidBuildersSalary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/inputdata/InputData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/DataBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/DataBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/building/Building.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/building/Building.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/exceptions/EFirstNameIsNuLLException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/exceptions/ELastNameIsNullException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/staff/Builder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/staff/Builder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/staff/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/staff/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/construction/buildingcompany/ProjectsOfBuildingCompany.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/construction/buildingcompany/ProjectsOfBuildingCompany.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/DataBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/DataBuilder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/building/Building$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/building/Building$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/building/Building.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/building/Building.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/staff/Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/staff/Builder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/buildingcompany/ProjectsOfBuildingCompany.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/buildingcompany/ProjectsOfBuildingCompany.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/exceptions/EBudgetIsNULL.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/exceptions/EBuildingTypeNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/exceptions/EFirstNameIsNuLLException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/exceptions/ELastNameIsNullException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/construction/staff/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/construction/staff/Person.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -297,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675193968026</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Merge remote-tracking branch 'origin/main'">
+      <created>1675332934542</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1675332934542</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">

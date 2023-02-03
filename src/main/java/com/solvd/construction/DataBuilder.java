@@ -18,30 +18,22 @@ public final class DataBuilder {
     public DataBuilder() {
     }
 
-    public static ProjectsOfBuildingCompany startBuilding(Type buildingType, ProjectsOfBuildingCompany project1) {
+    public static ProjectsOfBuildingCompany startBuilding(Type buildingType, ProjectsOfBuildingCompany project1) throws EBudgetSizeException, ECreditSizeException {
         int priceOfTheBuilding = Building.choiceOfTheBuildingPrice(buildingType, project1.getBuilding().getBuilders(), project1.getBuilding().getSuppliers());
         LOGGER.info("The price of your building is " + priceOfTheBuilding);
         int budget = project1.getBudget();
-        try {
             if (budget < 500000) {
                 LOGGER.info("You can't construct your building. The sum of your budget is too small. See you soon!");
                 System.exit(0);
                 throw new EBudgetSizeException("You can't construct your building. The sum of your budget is too small.");
             }
-        } catch (EBudgetSizeException e) {
-            throw new RuntimeException(e);
-        }
         if (budget < priceOfTheBuilding) {
             int credit = (priceOfTheBuilding - budget);
-            try {
                 if (credit > 1000000) {
                     LOGGER.info("You can't take a credit and construct your building. The sum is too big. See you soon!");
                     System.exit(0);
                     throw new ECreditSizeException("You can't take a credit. The sum is to big.");
                 }
-            } catch (ECreditSizeException e) {
-                throw new RuntimeException(e);
-            }
             LOGGER.info("You have taken out a credit for the amount of:  " + credit);
             project1.setCredit(credit);
         }
