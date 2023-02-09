@@ -8,8 +8,6 @@ import com.solvd.construction.inputdata.InputData;
 
 import java.util.logging.Logger;
 
-
-
 public class Main {
     private static final Logger LOGGER = Logger.getLogger(String.valueOf(Main.class));
 
